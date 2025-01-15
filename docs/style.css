@@ -585,9 +585,11 @@ span {
     transform: scale(1.2);
 }
 
-/* Ajustes específicos para pantallas pequeñas (máx. 400px) */
-@media (max-width: 400px) {
-    /* Ajuste del encabezado */
+
+/*---Responsive for mobiles --- */
+/* Ajustes específicos para pantallas pequeñas (375x667) */
+@media (max-width: 600px) {
+    /* Header */
     .header {
         padding: 2rem 5%;
         flex-direction: column;
@@ -600,21 +602,44 @@ span {
     }
 
     #menu-icons {
+        display: block;
+        font-size: 2.4rem;
+        color: var(--main-color);
+        cursor: pointer;
         align-self: flex-end;
     }
 
     .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
-        padding: 2rem 0;
-        text-align: center;
+        background-color: var(--second-bg-color);
+        padding: 1rem 0;
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex;
     }
 
     .navbar a {
-        font-size: 1.6rem;
-        margin: 1rem 0;
+        display: block;
+        font-size: 1.4rem;
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--main-color);
     }
 
-    /* Sección Home */
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    /* Home Section */
     .home {
         flex-direction: column;
         text-align: center;
@@ -622,32 +647,37 @@ span {
     }
 
     .home .home-content h1 {
-        font-size: 3.6rem;
+        font-size: 3.4rem;
     }
 
     .home-content h3 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .home-img img {
-        width: 120px;
-        margin-bottom: 2rem;
+        width: 100px;
+        margin-bottom: 1.5rem;
     }
 
     .home-content p {
-        font-size: 1.4rem;
-        line-height: 1.6;
+        font-size: 1.2rem;
+        line-height: 1.5;
         text-align: justify;
     }
 
     .social-icons a {
         width: 3rem;
         height: 3rem;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin: 1rem 0.5rem;
     }
 
-    /* Sección About */
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+
+    /* About Section */
     .about .row {
         flex-direction: column;
         gap: 2rem;
@@ -655,14 +685,19 @@ span {
 
     .about-col-1 img {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
+    }
+
+    .about-col-2 p{
+        font-size: 1.4rem;
     }
 
     .about-col-2 {
         font-size: 1.4rem;
+        text-align: justify;
     }
 
-    /* Sección Skills */
+    /* Skills Section */
     .skills .container {
         width: 100%;
         padding: 1rem;
@@ -677,7 +712,12 @@ span {
         font-size: 1.2rem;
     }
 
-    /* Sección Research */
+    .skills .contaniner .bar .info img {
+        width:100%;
+        height:100%;
+    }
+
+    /* Research Section */
     .research-list div h2 {
         font-size: 1.4rem;
     }
@@ -690,7 +730,7 @@ span {
         font-size: 1.2rem;
     }
 
-    /* Sección Courses */
+    /* Courses Section */
     .courses img {
         height: auto;
     }
@@ -713,6 +753,44 @@ span {
         font-size: 1.6rem;
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .skills .container {
+        width: 95%; /* Aumenta el ancho del contenedor */
+        padding: 2rem;
+        margin: auto;
+    }
+
+    .skills .container .row {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); /* Cambia a 7 columnas */
+        gap: 2rem; /* Espacio entre tarjetas */
+        justify-content: center;
+    }
+
+    .skills .container .bar {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: var(--second-bg-color);
+        transition: 0.3s ease;
+    }
+
+    .skills .container .bar:hover {
+        box-shadow: 0 5px 15px var(--main-color);
+        transform: scale(1.05); /* Ligero efecto de hover */
+    }
+}
+
+
+
+
+
+
+
+    
+
+
+
 
 
 

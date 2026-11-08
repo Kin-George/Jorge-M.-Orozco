@@ -97,6 +97,7 @@
         </nav>
 
         <div class="header-tools">
+            <button id="palette-toggle" class="tool-btn palette-btn" type="button" data-open="palette" aria-label="Buscar en el sitio" title="Buscar (Ctrl + K)"><i class="fa-solid fa-magnifying-glass"></i></button>
             <button id="lang-toggle" class="tool-btn lang-btn" type="button" aria-label="Ver en inglés" title="English">EN</button>
             <button id="theme-toggle" class="tool-btn" type="button" aria-label="Cambiar a modo claro" title="Modo claro"><i class="fa-solid fa-sun"></i></button>
             <button id="menu-icons" class="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navbar">
@@ -111,6 +112,7 @@
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <section class="home" id="home">
             <div class="home-content">
+                <p class="greeting" id="greeting" aria-live="polite"></p>
                 <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia · Economía del desarrollo</p>
                 <h1>Hola, soy <span>Jorge M. Orozco</span></h1>
                 <p class="typing-line" aria-label="Economista, investigador, analista de datos, consultor y creador de contenido">
@@ -125,6 +127,7 @@
                 <div class="home-actions">
                     <a href="#research" class="btn btn-primary">Ver investigación</a>
                     <a href="./documents/Curriculum_Jorge_Orozco_v3.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-solid fa-file-arrow-down"></i> Descargar CV</a>
+                    <button type="button" class="btn btn-ghost" data-open="recruiter"><i class="fa-solid fa-bolt"></i> <span>Resumen en 30 s</span></button>
                 </div>
 
                 <div class="social-icons">
@@ -157,7 +160,17 @@
             <div class="stat"><strong data-count="9">9</strong><span>Publicaciones, informes y columnas</span></div>
             <div class="stat"><strong>Q1</strong><span>Artículo en revista indexada</span></div>
             <div class="stat"><strong data-count="5">5</strong><span>Herramientas web interactivas</span></div>
-            <div class="stat"><strong>12 h <small>→</small> 10 min</strong><span>Tareas automatizadas en el World Bank</span></div>
+            <button type="button" class="stat stat-btn" data-open="automation"><strong>12 h <small>→</small> 10 min</strong><span>Tareas automatizadas en el World Bank</span><em class="stat-cta"><i class="fa-solid fa-play"></i> <span>Ver cómo</span></em></button>
+        </div>
+
+        <div class="orgs reveal">
+            <p class="orgs-title">He trabajado y estudiado en</p>
+            <ul class="orgs-list">
+                <li><i class="fa-solid fa-earth-americas"></i> World Bank Group</li>
+                <li><i class="fa-solid fa-building-columns"></i> Pontificia Universidad Javeriana</li>
+                <li><i class="fa-solid fa-graduation-cap"></i> Universidad Alberto Hurtado</li>
+                <li><i class="fa-solid fa-building-columns"></i> Universidad del Norte</li>
+            </ul>
         </div>
 
         <!-- ================= Sobre mí ================= -->
@@ -195,7 +208,13 @@
             <!-- Timeline horizontal -->
             <div class="journey">
                 <div class="journey-head">
-                    <h3 class="journey-title">Mi trayectoria</h3>
+                    <div class="journey-title-wrap">
+                        <h3 class="journey-title">Mi trayectoria</h3>
+                        <div class="view-switch" role="tablist" aria-label="Vista de la trayectoria">
+                            <button type="button" role="tab" id="view-tl" aria-controls="htl" aria-selected="true" class="active"><i class="fa-solid fa-timeline"></i> <span>Línea de tiempo</span></button>
+                            <button type="button" role="tab" id="view-map" aria-controls="jmap" aria-selected="false"><i class="fa-solid fa-map-location-dot"></i> <span>Mapa</span></button>
+                        </div>
+                    </div>
                     <div class="tl-filters" role="group" aria-label="Filtrar la trayectoria">
                         <button class="tl-filter active" data-filter="all" aria-pressed="true">Todo</button>
                         <button class="tl-filter" data-filter="personal" aria-pressed="false">Personal</button>
@@ -409,6 +428,76 @@
                         <span class="htl-counter" id="htl-counter" aria-live="polite">1 / 1</span>
                     </div>
                 </div>
+
+                <div class="jmap" id="jmap" role="region" aria-label="Mapa de mi recorrido" hidden>
+                    <div class="jmap-figure">
+                        <svg class="jmap-svg" viewBox="0 0 400 470" role="img" aria-label="Mapa del recorrido: Malambo, Barranquilla, Santiago de Chile y Bogotá">
+                            <defs>
+                                <linearGradient id="jmap-fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.82" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+                                <mask id="jmap-mask"><rect width="400" height="470" fill="url(#jmap-fade)"/></mask>
+                            </defs>
+                            <g class="jmap-land" mask="url(#jmap-mask)">
+                                <path d="M164,22L164,24L162,23L160,23L161,22L164,22ZM192,42L194,44L193,45L191,46L190,47L188,48L187,50L188,51L190,52L190,54L188,55L186,56L184,56L184,58L184,60L183,61L184,64L186,66L187,67L188,69L187,71L185,72L184,73L182,74L179,75L177,76L175,75L173,76L172,79L171,80L169,79L168,77L166,77L165,77L163,77L162,76L159,76L158,75L158,77L161,79L161,82L162,84L163,86L163,88L165,89L167,89L167,91L165,92L163,92L162,94L161,96L160,96L158,97L156,98L155,99L154,100L152,102L151,100L150,100L148,101L146,102L144,100L142,98L141,96L141,94L140,92L140,91L139,89L138,88L137,87L135,86L137,83L138,82L137,79L136,78L135,76L135,74L134,72L135,70L135,67L136,66L136,64L137,62L137,60L135,59L134,59L130,60L128,60L125,60L124,60L122,59L120,58L119,56L118,54L116,54L114,53L111,54L108,53L105,54L103,53L102,51L100,50L100,48L101,46L101,44L100,42L98,40L98,38L96,37L94,37L95,35L96,33L97,30L97,27L98,25L99,23L102,22L104,18L106,17L108,17L105,18L104,20L105,22L106,23L107,25L106,27L105,29L103,32L104,33L105,35L106,37L107,38L109,37L110,36L111,33L110,31L108,29L108,27L107,25L109,23L112,21L114,21L117,20L118,19L120,19L119,18L117,18L116,16L117,15L119,14L120,17L121,19L124,19L127,20L129,21L130,22L131,23L131,25L132,27L134,27L136,27L140,26L146,26L147,27L149,29L152,29L155,30L157,30L162,27L164,27L162,26L164,26L167,26L169,25L171,25L173,25L176,25L179,25L176,26L173,26L171,27L173,28L173,30L175,31L176,32L178,32L180,33L181,31L183,33L185,34L187,36L185,37L184,39L184,40L181,41L183,43L185,42L187,41L189,42L191,41Z"/>
+                                <path d="M242,366L240,368L239,370L237,372L236,373L230,375L228,375L225,374L221,375L219,375L216,373L214,372L211,372L209,372L208,370L206,369L204,367L204,364L205,362L206,361L206,359L206,356L207,355L206,353L207,351L207,349L208,347L208,346L209,344L208,342L210,340L210,339L212,340L214,339L216,338L219,341L221,342L222,344L222,346L224,345L225,344L227,345L228,347L229,347L233,349L234,351L236,352L238,353L239,354L240,356L242,357L243,358L242,360L241,361L241,364L241,366Z"/>
+                                <path d="M236,66L235,68L234,69L234,71L234,73L234,75L235,77L236,79L237,81L236,83L236,85L234,88L233,89L231,89L230,87L227,88L225,89L223,88L222,89L223,91L223,93L221,93L219,93L217,92L216,90L215,89L214,87L213,85L213,84L213,82L211,82L209,80L208,78L207,77L207,75L208,73L209,72L208,70L210,69L212,69L213,68L213,66L214,64L214,62L219,62L220,62L223,63L225,61L227,62L229,61L231,61L234,62L236,62L237,64L236,66Z"/>
+                                <path d="M119,140L117,140L116,139L114,139L112,140L110,141L108,141L106,142L104,142L102,144L100,145L99,146L97,147L97,150L96,152L95,154L95,155L95,157L93,159L91,160L90,162L91,163L89,164L89,166L90,167L91,169L92,170L93,172L94,173L95,174L96,176L96,178L98,180L100,180L102,181L102,183L105,184L107,184L109,184L110,183L112,182L114,180L114,182L114,184L114,185L114,189L114,190L115,192L117,192L119,191L121,191L123,193L124,196L126,198L126,200L127,201L128,203L127,205L126,206L126,210L126,212L126,215L127,216L126,218L125,219L124,220L123,222L125,224L124,225L123,227L124,231L127,232L126,234L125,236L123,238L121,239L122,241L121,243L120,245L119,247L117,248L115,248L112,246L111,244L109,243L108,241L105,239L104,238L102,237L100,235L98,235L94,233L91,232L88,229L86,229L85,228L81,226L79,224L78,222L76,221L75,220L73,217L72,216L71,214L73,211L71,208L70,206L68,203L67,201L66,200L65,197L62,194L62,192L59,186L57,183L56,179L55,178L54,174L52,172L52,170L51,169L49,167L47,164L46,162L45,160L44,158L38,156L37,154L36,153L38,152L38,151L36,147L36,145L35,143L35,141L38,137L40,135L42,133L43,135L43,137L42,138L41,140L41,141L43,141L45,141L47,142L48,143L49,145L51,146L52,144L54,143L54,141L55,139L55,138L56,136L57,134L58,133L60,131L62,130L64,129L68,128L70,126L72,125L75,122L76,121L77,119L78,117L78,116L80,115L79,113L78,110L77,109L79,108L80,108L82,109L83,110L85,111L86,113L87,114L88,115L90,117L92,117L93,119L94,121L95,123L95,125L97,126L98,126L100,126L102,126L104,125L105,124L107,124L109,125L111,124L113,125L115,126L116,127L118,128L117,129L116,131L115,133L114,135L113,136L115,137L116,137L117,138L119,140Z"/>
+                                <path d="M206,262L207,264L207,265L208,267L209,269L208,271L208,273L208,275L208,277L209,277L211,278L213,278L215,278L217,278L218,277L220,278L222,278L223,278L224,280L225,282L225,283L226,286L226,287L226,289L227,291L228,292L230,291L232,290L234,291L235,292L235,294L235,295L234,298L234,300L233,302L232,307L232,309L231,311L230,312L229,314L227,314L225,316L225,317L223,317L222,317L220,318L218,318L216,318L214,318L212,318L209,317L206,317L203,317L203,315L205,314L206,312L206,310L207,308L208,307L209,305L210,304L210,302L209,300L206,299L205,299L202,297L199,296L197,295L195,293L193,292L192,291L189,291L186,290L185,290L184,288L182,287L181,286L179,285L177,283L176,281L175,279L173,278L174,276L174,274L175,272L176,269L176,267L176,265L177,263L178,261L179,259L181,258L184,257L189,256L193,255L196,255L199,255L202,257L204,258L206,259L206,262Z"/>
+                                <path d="M64,41L64,43L65,45L65,46L64,48L63,49L61,48L61,50L60,52L58,50L56,47L57,45L58,43L60,44L61,45L59,44L58,43L56,43L55,41L53,40L51,38L49,38L47,39L46,41L44,43L42,44L41,45L43,47L44,49L44,50L42,50L41,52L39,52L38,52L37,48L35,49L33,48L32,46L31,45L29,44L27,44L25,44L23,45L22,44L23,42L23,40L24,39L23,38L23,35L24,34L26,34L27,36L28,37L29,39L30,39L33,40L36,40L38,39L40,38L43,37L45,36L46,35L49,34L51,34L54,35L59,37L61,38L61,39L64,41Z"/>
+                                <path d="M21,-8L20,-6L21,-3L20,0L19,2L18,5L18,8L18,11L17,11L17,13L17,15L16,16L17,17L16,19L16,21L17,23L17,25L14,25L12,23L10,23L8,23L6,23L3,22L2,23L0,20L-3,17L-5,15L-6,13L-8,12L-11,10L-12,8L-11,8L-8,8L-7,6L-5,5L-6,3L-3,2L-1,0L2,1L3,0L5,-2L6,-3L7,-4L8,-6L9,-5L11,-5L13,-6L15,-6L17,-7L18,-7L21,-8Z"/>
+                                <path d="M187,67L186,66L184,64L182,62L184,60L184,58L184,57L185,56L187,55L190,54L190,53L188,52L188,51L188,49L189,47L191,47L192,46L194,44L192,42L194,43L196,44L199,45L201,48L203,49L204,51L204,53L203,55L203,58L204,56L205,55L207,55L209,57L210,58L212,59L213,61L214,62L213,65L212,66L213,68L211,69L209,70L208,71L208,73L207,75L207,77L208,78L209,80L210,82L213,81L213,83L213,85L214,86L215,88L216,90L217,91L218,92L217,93L215,93L213,92L211,94L209,94L207,95L206,95L204,96L203,98L201,98L199,97L198,96L196,95L195,94L194,92L194,90L193,88L193,84L194,82L194,80L195,79L196,77L195,75L195,74L193,73L191,73L192,71L193,69L192,68L190,67L188,68Z"/>
+                                <path d="M79,108L77,108L78,110L79,111L80,115L78,116L78,117L77,119L76,121L75,122L73,124L71,125L69,127L65,128L63,129L60,130L59,132L58,133L56,135L56,137L55,138L54,140L54,142L53,143L52,145L50,145L49,144L48,142L46,142L44,141L42,141L42,140L41,138L42,138L43,136L43,134L43,133L45,132L46,129L46,127L46,125L46,124L45,126L43,127L42,128L39,126L38,125L39,123L39,121L39,118L38,116L40,114L41,113L42,112L41,111L42,109L43,107L44,104L44,101L46,100L48,99L50,99L53,98L53,96L54,98L57,99L59,100L61,101L62,102L64,104L65,105L67,105L69,105L71,105L72,104L74,105L75,106L77,107L79,108ZM43,130L43,128L44,128L43,130Z"/>
+                                <path d="M25,34L24,34L23,36L24,38L23,40L23,42L22,43L23,45L22,44L21,42L20,41L20,43L18,43L17,41L18,40L17,38L16,36L14,35L11,34L10,33L7,30L6,29L6,31L8,32L7,33L5,32L3,31L1,30L1,28L2,26L1,24L2,23L3,22L5,22L8,23L10,23L11,23L13,24L15,25L17,24L19,27L21,30L23,32L25,34Z"/>
+                                <path d="M109,16L107,17L104,18L102,22L100,23L99,24L97,27L97,29L96,32L95,34L94,36L96,36L97,37L98,40L99,41L101,43L101,45L100,47L100,50L101,51L103,53L105,54L107,53L109,54L113,53L115,53L117,54L119,56L120,58L122,59L123,60L124,60L126,60L130,60L132,60L134,59L137,59L137,61L136,63L136,65L135,66L135,68L134,72L135,73L135,75L136,78L137,79L138,81L137,83L135,85L136,86L138,88L139,89L140,91L140,92L141,94L141,96L142,98L140,98L140,95L139,93L138,92L137,91L135,93L134,94L133,93L132,94L128,94L127,94L124,94L122,94L120,94L120,97L120,99L121,99L123,99L124,100L125,102L123,102L121,102L120,103L118,104L118,106L118,108L119,110L120,111L122,112L122,114L123,116L123,118L122,121L122,123L121,125L121,128L121,130L120,133L120,135L119,138L119,140L117,138L116,137L115,137L113,136L114,135L115,133L116,131L117,129L118,128L116,127L115,126L113,125L112,124L110,125L108,125L106,124L104,125L103,126L101,126L99,125L97,126L95,125L95,123L95,121L93,121L92,118L91,117L89,116L88,115L86,114L86,112L84,110L83,109L81,108L79,108L77,107L75,106L74,105L72,104L71,105L69,105L67,105L65,105L64,104L63,102L62,101L59,100L57,99L55,98L54,97L53,96L52,94L55,94L55,92L55,90L56,88L58,88L60,87L61,86L61,84L63,83L64,82L65,80L66,77L65,76L64,75L64,73L65,71L64,68L64,67L63,65L64,64L64,61L63,60L64,57L63,56L62,55L61,53L61,50L61,49L62,50L64,48L65,47L65,45L64,43L64,41L66,43L67,45L67,46L68,44L68,42L69,41L72,38L73,36L75,35L77,35L76,33L77,31L77,29L78,27L79,25L81,24L82,23L86,23L86,25L87,23L87,21L90,21L91,21L94,21L98,18L100,17L102,15L104,14L106,12L107,12L109,13L110,15L109,16Z" class="hl"/>
+                                <path d="M115,248L117,248L119,247L120,245L120,243L122,242L123,244L125,246L125,248L126,250L126,252L126,253L128,254L129,256L129,257L128,259L129,260L128,261L128,263L130,265L129,267L131,269L132,272L133,274L133,276L134,278L134,280L134,282L135,283L138,283L141,284L140,286L139,289L138,291L137,292L134,293L131,294L130,296L129,297L130,299L129,301L129,303L130,305L130,307L129,309L129,311L131,313L131,315L129,315L127,316L126,318L125,320L124,322L123,323L121,325L120,327L120,330L119,332L119,334L119,336L119,338L119,340L118,340L117,343L116,344L116,346L114,348L114,349L115,352L117,352L116,354L117,356L118,359L118,361L118,363L120,363L119,365L119,368L120,369L118,370L117,372L117,373L116,375L116,377L115,378L115,380L116,382L116,384L114,385L113,386L111,387L110,389L110,390L110,393L110,395L110,397L111,399L111,401L112,403L111,404L110,405L108,406L108,408L107,410L106,411L106,413L106,415L106,417L105,418L104,420L105,422L105,424L105,426L105,428L105,429L104,431L103,432L103,433L103,435L103,437L104,438L104,440L106,442L106,444L105,445L105,447L109,448L110,449L109,451L107,451L105,451L103,451L105,452L107,452L108,454L107,456L106,457L106,459L106,460L105,461L106,463L106,465L104,466L104,468L103,470L101,472L100,474L101,476L102,477L100,479L99,481L98,482L96,483L95,485L93,486L92,488L93,489L93,491L93,493L94,494L95,496L97,496L99,496L101,496L102,498L101,499L101,501L101,503L103,504L104,505L106,506L108,506L112,506L115,506L119,506L121,507L122,507L124,507L126,508L129,508L126,508L124,508L122,509L120,510L116,511L113,512L112,513L111,516L111,517L111,520L109,521L106,520L103,519L101,517L101,516L103,516L105,516L104,518L106,516L108,515L110,513L108,512L104,514L103,514L100,516L100,517L96,516L97,513L98,512L100,512L103,511L105,511L107,511L105,510L102,510L100,511L99,510L98,512L96,513L94,514L93,513L94,512L95,511L93,511L92,511L90,511L89,509L87,508L90,508L91,507L93,507L95,507L97,506L99,507L99,509L100,507L99,506L100,504L98,503L95,502L98,503L99,504L97,505L95,506L92,506L91,505L90,505L88,504L89,503L90,501L88,500L86,500L84,499L82,498L81,496L83,496L83,494L85,494L86,495L87,497L90,498L91,496L91,495L90,497L88,496L88,495L89,495L87,494L85,493L86,491L89,491L86,489L87,488L89,488L88,486L89,484L88,486L86,486L86,484L86,482L87,479L89,479L87,479L85,478L85,477L86,476L90,476L92,477L92,475L91,473L90,474L88,475L86,475L85,474L85,472L87,473L85,471L87,469L88,468L87,466L85,467L83,466L81,465L79,465L77,466L79,467L77,467L77,465L78,464L80,463L81,462L81,460L83,459L85,459L88,458L88,456L89,456L89,459L89,461L86,462L88,462L89,461L90,459L91,461L90,463L89,465L91,463L91,461L92,459L91,458L91,456L93,455L96,456L95,454L93,454L94,452L96,452L98,450L99,448L96,447L94,446L95,444L96,442L96,440L97,438L98,437L97,435L99,433L98,432L100,431L101,433L100,431L100,429L98,429L99,427L101,427L99,427L98,426L95,428L92,428L91,427L90,426L89,423L89,421L90,418L91,416L91,414L93,413L94,410L93,404L92,402L93,400L92,398L91,396L92,395L92,393L94,393L95,392L95,390L97,388L98,383L99,382L100,380L101,378L102,377L103,373L104,370L104,368L105,367L106,365L106,364L106,361L108,358L108,356L107,351L107,349L106,346L106,343L106,340L108,339L109,337L109,335L108,332L107,329L109,327L110,325L110,323L110,321L112,319L112,317L112,314L113,311L114,309L114,307L113,305L114,303L115,302L114,297L114,294L115,291L115,289L114,287L114,284L116,283L117,280L117,278L117,276L118,273L118,271L117,266L117,262L117,259L117,257L116,255L116,252L116,250L115,248ZM129,511L129,513L129,516L129,518L129,520L129,522L129,524L129,526L128,528L125,528L122,528L121,527L118,528L117,527L115,528L113,527L109,527L108,526L105,526L106,525L108,525L110,525L111,525L113,524L115,525L115,524L113,523L112,521L114,520L115,519L115,521L114,522L116,523L117,524L119,524L120,524L123,525L124,526L126,525L119,522L117,521L119,519L121,518L123,518L121,516L119,516L118,517L116,517L115,515L116,514L116,512L118,512L120,512L122,510L125,511L127,511ZM91,440L89,440L87,440L87,438L87,436L88,434L88,432L88,430L89,429L91,429L92,429L93,431L92,432L91,434L92,435L93,437L91,438L91,440ZM85,484L85,487L85,488L85,490L83,491L82,489L83,487L82,489L79,490L77,489L79,488L78,486L79,485L81,483L82,482L83,481L85,481L85,484ZM78,481L77,480L78,478L77,476L79,476L80,479L80,481L78,481ZM85,480L82,480L81,478L80,477L82,475L83,476L84,478L85,480ZM83,503L83,505L85,506L84,507L83,508L81,506L81,505L82,503ZM91,448L89,449L90,450L90,452L91,454L90,455L88,455L87,453L86,451L84,450L86,448L88,448L88,446L90,446L91,448ZM96,451L95,451L93,450L94,449L95,447L97,448L97,450ZM81,482L80,484L78,485L78,483L79,482ZM85,501L83,502L81,502L80,503L80,501L82,501L84,500ZM81,493L79,493L79,492L81,491L82,492L81,493ZM87,458L85,458L85,456L86,454L87,456L87,458Z" class="hl"/>
+                                <path d="M142,98L144,100L145,101L147,102L149,101L150,100L152,101L154,100L155,99L156,98L158,97L159,96L161,96L162,94L163,92L165,92L167,91L168,89L166,89L164,89L163,87L162,84L161,83L161,81L159,77L158,76L161,76L162,77L165,77L166,77L168,77L169,79L171,80L172,79L172,77L174,76L177,76L179,75L181,74L182,73L184,73L186,71L188,70L188,68L190,67L191,67L193,68L192,70L192,72L193,73L195,74L195,75L196,77L195,79L194,80L194,82L193,84L193,86L193,89L194,91L194,93L196,94L197,96L199,97L201,98L203,98L204,96L205,95L207,96L208,95L210,94L212,93L213,92L215,93L217,93L219,93L221,93L222,93L223,91L221,90L222,88L224,89L227,89L228,88L230,88L231,89L233,90L235,91L237,90L239,89L240,90L242,89L244,90L245,90L247,89L248,87L248,85L249,84L250,82L251,81L252,79L253,78L254,76L255,75L257,75L259,79L259,82L259,84L261,87L261,89L261,91L263,93L264,94L266,94L268,96L267,98L266,100L264,101L263,102L262,104L261,106L259,106L257,108L256,110L255,112L254,113L254,115L252,116L252,118L248,119L250,119L252,120L254,118L257,117L259,115L260,117L261,119L262,120L264,123L265,122L267,122L270,122L272,121L271,122L271,124L270,127L271,125L273,122L274,121L276,119L278,120L278,118L278,116L279,115L281,113L282,113L284,113L286,113L287,113L289,113L292,114L293,115L295,116L297,116L299,118L301,119L303,119L305,120L307,121L307,123L306,124L308,124L307,126L307,128L306,131L308,130L308,128L309,127L309,128L311,128L313,127L315,127L317,126L319,126L321,127L324,129L326,129L328,129L330,130L332,129L334,129L337,129L339,129L341,129L342,130L344,131L348,133L350,135L352,136L354,138L355,140L357,141L358,143L361,144L362,145L363,145L365,146L368,146L369,146L374,147L376,150L377,153L377,155L378,156L378,159L379,161L379,163L379,165L379,167L379,168L378,172L377,176L375,178L373,181L372,182L370,185L369,186L367,188L366,189L363,190L362,192L361,195L359,197L358,200L356,203L354,206L352,207L352,205L350,204L349,205L349,207L348,209L348,211L348,213L348,215L348,220L348,222L348,224L349,227L349,229L348,231L348,234L347,236L347,238L347,240L347,243L346,244L345,245L343,247L343,250L343,255L342,257L341,259L340,260L339,262L338,264L336,267L335,268L334,270L333,272L333,275L332,277L329,278L326,281L326,282L325,283L322,283L320,284L318,283L317,282L317,284L315,284L312,285L314,284L311,283L308,284L306,284L307,286L304,287L302,288L301,289L299,290L297,290L292,292L290,293L288,295L285,297L283,299L282,300L280,302L278,301L277,303L279,304L277,305L277,308L277,310L276,312L277,315L277,317L277,321L277,323L276,324L276,327L274,327L272,329L270,330L269,333L266,336L264,341L262,344L261,346L260,347L258,349L256,350L253,352L252,354L251,351L253,351L256,349L258,348L258,346L260,345L261,344L261,341L262,339L260,340L258,339L257,338L257,339L257,341L257,343L256,344L254,347L252,348L252,350L250,352L251,354L250,355L248,359L247,361L245,364L242,366L241,364L241,362L242,360L244,358L242,357L240,356L239,354L238,353L236,352L234,351L233,349L230,348L228,347L227,346L225,344L224,345L223,346L222,344L221,342L219,341L217,339L215,338L213,339L211,339L212,338L213,336L215,334L217,333L217,331L219,330L221,328L222,327L223,325L225,325L225,323L227,322L229,321L230,320L231,318L233,318L235,318L236,316L238,316L239,314L239,312L239,310L239,308L238,306L238,305L237,304L235,303L233,304L234,301L234,298L235,295L235,294L235,292L234,291L232,290L230,291L228,292L227,291L226,289L226,287L226,286L225,284L225,282L224,281L224,279L222,278L220,278L219,277L218,278L215,278L213,278L211,278L209,277L208,277L208,275L208,273L208,271L209,269L208,268L208,266L207,264L206,263L207,261L207,259L207,258L208,256L208,255L209,253L209,251L210,249L211,247L210,245L209,243L207,242L206,241L204,240L204,237L204,235L205,234L205,232L200,232L197,232L194,232L191,232L191,229L191,226L190,225L189,223L191,223L190,219L190,218L189,216L189,214L188,213L186,211L184,211L182,211L179,211L177,209L175,208L173,207L171,206L169,204L168,205L166,204L165,203L163,203L160,203L159,201L157,200L156,199L155,197L153,196L153,194L153,192L153,190L152,188L153,186L153,184L153,182L151,182L149,182L146,183L145,183L143,184L140,186L138,187L136,188L135,189L133,189L131,191L130,192L128,193L126,192L124,191L123,191L120,191L118,192L116,192L115,191L114,189L114,187L114,184L114,182L114,180L112,181L111,183L109,184L107,184L105,184L103,184L102,182L101,181L99,180L96,179L97,177L96,175L94,174L93,172L92,171L92,169L91,168L90,166L89,164L91,164L90,162L91,160L93,159L95,158L95,156L95,154L96,152L97,150L97,148L98,146L99,146L101,144L103,143L105,142L107,142L109,141L111,141L113,139L115,139L116,140L118,141L119,138L120,135L120,133L121,130L121,128L121,125L122,123L122,121L123,118L123,117L122,115L121,113L121,112L120,110L118,109L118,107L118,104L120,103L121,102L123,102L124,103L125,101L124,99L122,99L120,99L120,97L120,96L120,94L122,94L125,94L128,94L130,94L132,94L132,92L133,94L135,94L136,92L138,91L139,93L140,95L140,97L140,98ZM269,109L271,109L273,109L276,109L278,109L278,111L278,112L277,114L276,116L275,117L275,119L273,118L272,120L270,120L268,121L267,120L264,121L262,120L261,118L261,116L261,114L261,113L261,111L263,109L265,108L269,109ZM269,105L268,107L266,107L264,107L266,106L268,105ZM262,108L260,110L259,108L261,108ZM263,106L262,107L263,105L264,103L264,105ZM253,118L253,117L254,114L255,112L257,112L257,115L256,117L255,118L253,118Z"/>
+                                <path d="M122,242L121,240L122,239L124,237L126,235L126,233L126,232L123,228L124,225L125,224L123,223L123,221L124,219L126,218L127,216L126,215L125,212L126,210L126,207L127,205L128,204L127,201L126,200L126,198L125,197L123,194L122,191L124,191L126,192L128,192L130,192L131,191L133,189L135,189L136,188L138,187L140,186L143,184L145,183L146,183L149,182L150,182L152,182L153,184L153,185L153,187L153,190L153,192L153,194L153,196L154,197L156,199L157,200L158,201L160,203L163,203L165,203L166,204L168,205L169,204L171,206L172,207L174,208L176,208L178,210L181,211L184,211L186,211L187,212L189,213L190,215L189,217L190,219L191,223L188,223L190,225L191,226L191,228L191,231L194,232L197,232L200,232L203,233L205,234L204,235L204,237L204,240L206,241L207,242L209,243L210,245L211,247L210,249L209,251L209,253L208,255L208,256L207,258L207,259L208,261L207,262L206,260L204,258L202,257L199,255L196,255L193,255L189,256L186,257L181,258L180,258L178,261L177,263L176,265L176,267L176,269L175,272L174,274L174,276L173,278L172,276L168,276L165,276L164,276L162,279L161,281L161,282L160,281L159,279L158,277L156,277L152,277L150,277L148,275L146,276L144,277L143,278L141,280L140,282L138,283L136,283L135,283L134,281L134,279L133,277L133,275L132,273L132,271L130,268L129,267L128,265L128,262L129,261L128,259L129,257L129,256L128,254L126,253L126,252L126,250L125,248L125,246L124,245L122,242Z"/>
+                                <path d="M210,339L210,340L208,342L209,344L208,346L208,347L207,349L207,351L206,352L206,354L206,356L206,360L205,361L204,363L203,366L204,367L205,370L204,372L205,373L209,375L211,376L213,377L214,379L212,381L212,384L214,386L217,386L217,389L217,391L214,395L212,397L211,399L206,402L200,404L195,405L186,406L182,406L181,406L179,406L177,406L175,405L175,408L177,409L177,411L177,413L175,414L175,416L175,418L176,419L175,421L172,422L169,423L166,423L162,422L160,421L158,421L157,420L155,420L154,423L155,426L155,429L156,431L158,431L160,433L162,432L161,431L164,430L166,432L166,434L165,436L163,436L161,435L159,433L157,434L155,435L158,436L160,437L158,438L156,439L154,441L153,443L154,445L154,447L153,448L151,450L151,451L147,452L144,453L142,454L139,457L138,458L137,460L136,462L138,464L142,468L148,469L150,470L150,472L148,474L150,475L148,476L145,478L144,479L140,480L139,482L137,483L136,485L135,490L132,492L130,491L129,490L127,491L129,491L130,492L128,493L126,494L125,495L125,497L123,499L125,499L125,501L125,503L123,503L126,503L128,506L130,508L128,508L124,507L122,507L121,507L119,506L115,506L112,506L108,506L106,506L104,506L103,504L101,503L101,501L101,499L102,498L101,496L99,496L97,496L96,497L94,495L93,493L93,491L93,489L92,488L93,486L95,485L96,483L98,482L99,481L99,479L101,478L101,476L100,475L101,473L102,471L103,470L104,468L105,466L106,465L105,463L105,461L106,460L105,458L107,456L109,455L107,453L105,452L103,452L105,451L107,451L109,451L110,449L109,448L105,448L105,446L106,444L106,443L104,440L106,439L103,438L103,435L103,433L103,432L104,430L105,430L105,428L105,426L105,424L105,422L104,420L105,418L106,417L105,415L106,414L106,412L107,411L108,409L108,406L110,405L111,404L112,403L111,401L111,399L110,397L110,395L110,393L110,390L110,389L111,387L113,386L114,385L116,384L116,382L115,380L115,378L116,377L116,375L117,373L117,372L118,370L120,369L119,368L119,365L120,363L118,363L118,361L118,359L117,356L116,355L116,353L115,352L114,349L114,348L115,346L116,344L117,343L117,341L119,340L120,339L119,336L119,334L118,332L119,331L120,328L121,326L122,324L123,323L125,322L126,319L127,316L128,315L130,315L131,313L129,311L129,309L130,307L130,305L129,303L129,301L130,300L129,298L130,296L131,295L133,294L137,292L138,292L139,289L140,286L141,284L139,282L140,281L142,279L143,278L145,277L146,275L149,276L152,277L155,277L157,277L158,278L159,280L160,282L161,280L163,277L165,276L168,276L172,276L173,278L175,279L176,281L177,283L178,284L180,286L181,287L184,288L185,290L186,290L189,291L191,292L193,292L195,293L197,295L199,296L202,297L204,298L206,299L209,300L210,302L211,303L209,304L208,306L207,308L206,310L206,311L205,313L204,314L203,316L206,317L209,317L212,318L214,318L216,318L218,318L219,319L220,317L223,317L224,318L225,316L226,314L228,314L230,313L231,312L232,309L232,307L232,303L234,304L236,303L237,304L238,306L239,308L239,310L239,312L239,314L238,315L237,316L235,317L233,318L232,319L230,320L229,321L227,322L225,323L225,324L223,325L222,327L221,328L219,330L218,331L217,333L215,334L213,336L212,338L210,339Z"/>
+                            </g>
+                            <path class="jmap-route" id="jmap-r1" pathLength="1" d="M83.1,23.7 Q10,200 113.6,363.9"/>
+                            <path class="jmap-route" id="jmap-r2" pathLength="1" d="M113.6,363.9 Q215,230 88.4,71.2"/>
+                            <line class="jmap-leader" x1="86.1" y1="23.7" x2="214" y2="58"/>
+                            <g class="jmap-inset" transform="translate(262 62)">
+                                <circle r="48" class="jmap-inset-bg"/>
+                                <path class="jmap-commute" d="M-20,-16 Q8,-14 18,14"/>
+                                <circle class="jmap-city" data-stop="1" cx="-20" cy="-16" r="5"/>
+                                <circle class="jmap-city" data-stop="0" cx="18" cy="14" r="5"/>
+                                <text x="-20" y="-25" text-anchor="middle">Barranquilla</text>
+                                <text x="18" y="31" text-anchor="middle">Malambo</text>
+                                <text class="jmap-hours" x="6" y="-2" text-anchor="middle">2 h</text>
+                            </g>
+                            <circle class="jmap-city" data-stop="1" cx="83.1" cy="23.7" r="4.5"/>
+                            <circle class="jmap-city" data-stop="2" cx="113.6" cy="363.9" r="5"/>
+                            <circle class="jmap-city" data-stop="3" cx="88.4" cy="71.2" r="5"/>
+                            <text class="jmap-label" x="123.6" y="367.9">Santiago</text>
+                            <text class="jmap-label" x="98.4" y="75.2">Bogotá</text>
+                        </svg>
+                    </div>
+                    <div class="jmap-side">
+                        <p class="jmap-total"><i class="fa-solid fa-route"></i> <span>Más de 9.200 km recorridos</span></p>
+                        <ol class="jmap-steps" id="jmap-steps">
+                            <li class="jmap-step" data-stop="0">
+                                <button type="button"><span class="jmap-when">2019 – 2023</span><strong>Malambo, Atlántico</strong>
+                                <span class="jmap-text">Mi punto de partida. Desde aquí salía cada día a la universidad: unas dos horas de camino solo para llegar a clase.</span></button>
+                            </li>
+                            <li class="jmap-step" data-stop="1">
+                                <button type="button"><span class="jmap-when">2019 – 2023</span><strong>Barranquilla</strong>
+                                <span class="jmap-text">Economía en la Universidad del Norte con beca, analista de datos e instructor de Python. Me gradué con honores.</span></button>
+                            </li>
+                            <li class="jmap-step" data-stop="2">
+                                <button type="button"><span class="jmap-when">2023 – 2025 · 4.958 km al sur</span><strong>Santiago de Chile</strong>
+                                <span class="jmap-text">Magíster en Economía en la Universidad Alberto Hurtado con beca ILADES. Tesis Magna Cum Laude y artículo Q1.</span></button>
+                            </li>
+                            <li class="jmap-step" data-stop="3">
+                                <button type="button"><span class="jmap-when">2025 – hoy · 4.258 km de regreso</span><strong>Bogotá</strong>
+                                <span class="jmap-text">World Bank Group y Centro Javeriano de Competitividad: datos y evidencia para las decisiones de política.</span></button>
+                            </li>
+                        </ol>
+                        <div class="jmap-controls">
+                            <button type="button" class="htl-btn" id="jmap-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="htl-btn" id="jmap-next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -582,7 +671,10 @@
                         <h3>The impact of violence on economic growth: evidence from Colombia’s armed conflict</h3>
                         <p class="pub-authors">Díaz, C. y <strong>Orozco, J.</strong> (2025). <em>Defence and Peace Economics</em>, 37(5), 731–760.</p>
                     </div>
-                    <a href="https://doi.org/10.1080/10242694.2025.2559009" target="_blank" rel="noopener" class="btn btn-primary">Leer artículo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <div class="featured-actions">
+                        <a href="https://doi.org/10.1080/10242694.2025.2559009" target="_blank" rel="noopener" class="btn btn-primary">Leer artículo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <button type="button" class="btn btn-outline" id="sc-toggle" aria-expanded="false" aria-controls="sc-panel"><i class="fa-solid fa-chart-line"></i> <span>Explorar el resultado</span></button>
+                    </div>
                 </div>
                 <figure class="pub-chart reveal" id="pub-chart">
                     <figcaption>
@@ -594,6 +686,33 @@
                     <div class="pub-tip" id="pub-tip" role="status" hidden></div>
                     <div class="sr-only"><table id="pub-table"></table></div>
                 </figure>
+            </div>
+
+            <div class="sc-panel" id="sc-panel" hidden>
+                <div class="sc-head">
+                    <div>
+                        <span class="tag">Resultado principal · Control sintético</span>
+                        <h3>¿Cuánto le costó el conflicto armado a Colombia?</h3>
+                        <p>PIB per cápita de Colombia frente a una “Colombia sintética” que no vivió la escalada de la violencia, construida con 11 países (sobre todo Mauricio, Paraguay, Uruguay y Chipre).</p>
+                    </div>
+                    <div class="sc-readout">
+                        <strong id="sc-gap">−24 %</strong>
+                        <span id="sc-text"></span>
+                    </div>
+                </div>
+                <ul class="pub-legend sc-legend">
+                    <li><i style="background: var(--c1)"></i>Colombia</li>
+                    <li><i class="dash" style="background: var(--c2)"></i>Colombia sintética</li>
+                </ul>
+                <div class="sc-plot" id="sc-plot"></div>
+                <div class="pub-tip" id="sc-tip" hidden></div>
+                <label class="sc-slider">
+                    <span>Mueve el año</span>
+                    <input type="range" id="sc-year" min="1976" max="1994" step="1" value="1994">
+                    <output id="sc-year-out" for="sc-year">1994</output>
+                </label>
+                <p class="sc-source">Fuente: Díaz y Orozco (2025), <em>Defence and Peace Economics</em>. Serie replicada con el código de la tesis; PIB per cápita en paridad de poder adquisitivo.</p>
+                <div class="sr-only"><table id="sc-table"></table></div>
             </div>
 
             <div class="res-tabs reveal" data-tabs>
@@ -663,12 +782,12 @@
                     <p>Visualizaciones para públicos no técnicos, con código replicable en GitHub.</p>
                     <a href="https://github.com/Kin-George/CJC-Monitor" target="_blank" rel="noopener" class="link-arrow">Ver código en GitHub <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <div class="tools-links">
-                    <a href="https://kin-george.github.io/CJC-Interactividad/" target="_blank" rel="noopener"><i class="fa-solid fa-industry"></i><span>Productividad laboral</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://kin-george.github.io/CJC-Interactividad02/" target="_blank" rel="noopener"><i class="fa-solid fa-gauge-high"></i><span>Productividad total de los factores</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://kin-george.github.io/CJC-Interactividad03/" target="_blank" rel="noopener"><i class="fa-solid fa-robot"></i><span>IA y automatización</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://kin-george.github.io/CJC-Interactividad04/" target="_blank" rel="noopener"><i class="fa-solid fa-user-graduate"></i><span>Remuneración educativa</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    <a href="https://kin-george.github.io/CJC-Interactividad05/" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i><span>Geografía de la remuneración</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="tools-links" data-hint="Haz clic para ver una vista previa">
+                    <a href="https://kin-george.github.io/CJC-Interactividad/" target="_blank" rel="noopener" data-preview data-name="Productividad laboral" data-desc="¿Colombia produce más por cada hora de trabajo? Resumen interactivo del informe de productividad laboral por actividad económica, 2010–2025, con datos del DANE y la GEIH."><i class="fa-solid fa-industry"></i><span>Productividad laboral</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://kin-george.github.io/CJC-Interactividad02/" target="_blank" rel="noopener" data-preview data-name="Productividad total de los factores" data-desc="¿Colombia produce con más eficiencia que hace veinte años? Veinte años de productividad total de los factores por actividad económica, 2005–2025."><i class="fa-solid fa-gauge-high"></i><span>Productividad total de los factores</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://kin-george.github.io/CJC-Interactividad03/" target="_blank" rel="noopener" data-preview data-name="IA y automatización" data-desc="¿Qué potencial de automatización tiene tu ocupación? Explora todas las ocupaciones del país con datos de la GEIH 2025."><i class="fa-solid fa-robot"></i><span>IA y automatización</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://kin-george.github.io/CJC-Interactividad04/" target="_blank" rel="noopener" data-preview data-name="Remuneración educativa" data-desc="¿Cuánto más se gana por estudiar en Colombia? Calcula cuánto podrías ganar según tu nivel educativo. Hecha con el Laboratorio de Economía de la Educación."><i class="fa-solid fa-user-graduate"></i><span>Remuneración educativa</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://kin-george.github.io/CJC-Interactividad05/" target="_blank" rel="noopener" data-preview data-name="Geografía de la remuneración" data-desc="Cuánto se remunera el trabajo en cada departamento, cuánto ha crecido desde 2010 y si los departamentos rezagados alcanzan a los líderes."><i class="fa-solid fa-map-location-dot"></i><span>Geografía de la remuneración</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -750,6 +869,89 @@
             <a href="https://www.instagram.com/chico_python06/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
+
+
+    <!-- ================= Diálogos ================= -->
+    <dialog class="modal" id="dlg-recruiter" aria-labelledby="rec-title">
+        <div class="modal-card recruiter">
+            <button class="modal-close" type="button" data-close aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <div class="rec-progress" aria-hidden="true"><span></span></div>
+            <p class="eyebrow"><i class="fa-solid fa-bolt"></i> Resumen en 30 segundos</p>
+            <div class="rec-top">
+                <img src="./img/Perfil.jpeg" alt="" width="72" height="72">
+                <div>
+                    <h2 id="rec-title">Jorge M. Orozco</h2>
+                    <p>Economista (M.A.) · Bogotá, Colombia · Español e inglés</p>
+                </div>
+            </div>
+            <ul class="rec-facts">
+                <li><strong>Hoy</strong><span>Country Program and Portfolio Analyst, World Bank Group · Consultor de investigación, Centro Javeriano de Competitividad</span></li>
+                <li><strong>Impacto</strong><span>Automaticé tareas de 12 horas a 10 minutos y construí cinco herramientas web interactivas para públicos no técnicos.</span></li>
+                <li><strong>Investigación</strong><span>Artículo en revista Q1 sobre el costo económico del conflicto armado; tesis de maestría Magna Cum Laude.</span></li>
+                <li><strong>Herramientas</strong><span>Python · R · Stata · SQL · Power BI · LaTeX · GitHub</span></li>
+            </ul>
+            <div class="rec-actions">
+                <a href="./documents/Curriculum_Jorge_Orozco_v3.pdf" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-file-arrow-down"></i> Descargar CV</a>
+                <a href="mailto:jmorozco333@gmail.com" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Escribirme</a>
+                <a href="https://www.linkedin.com/in/eco-jorge-orozco/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="modal" id="dlg-automation" aria-labelledby="auto-title">
+        <div class="modal-card automation">
+            <button class="modal-close" type="button" data-close aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+            <p class="eyebrow"><i class="fa-solid fa-gears"></i> World Bank Group</p>
+            <h2 id="auto-title">De 12 horas a 10 minutos</h2>
+            <p class="auto-intro">Así cambió la actualización de los datos del portafolio cuando la convertí en un flujo automatizado con Python.</p>
+            <div class="auto-lanes">
+                <div class="auto-lane" id="lane-manual">
+                    <div class="auto-lane-head"><span><i class="fa-solid fa-hand"></i> Antes: manual</span><strong class="auto-clock">0 h 00 min</strong></div>
+                    <div class="auto-bar"><span></span></div>
+                    <ol class="auto-steps"></ol>
+                </div>
+                <div class="auto-lane auto" id="lane-auto">
+                    <div class="auto-lane-head"><span><i class="fa-solid fa-bolt"></i> Ahora: automatizado</span><strong class="auto-clock">0 min</strong></div>
+                    <div class="auto-bar"><span></span></div>
+                    <ol class="auto-steps"></ol>
+                </div>
+            </div>
+            <div class="auto-foot">
+                <button type="button" class="btn btn-primary" id="auto-play"><i class="fa-solid fa-play"></i> <span>Reproducir</span></button>
+                <p class="auto-result" id="auto-result" aria-live="polite"></p>
+            </div>
+            <p class="auto-note">El total (12 h → 10 min) es real; el reparto entre pasos es ilustrativo.</p>
+        </div>
+    </dialog>
+
+    <dialog class="modal" id="dlg-preview" aria-labelledby="prev-title">
+        <div class="modal-card preview">
+            <div class="preview-head">
+                <div>
+                    <span class="tag">Centro Javeriano de Competitividad</span>
+                    <h2 id="prev-title"></h2>
+                    <p id="prev-desc"></p>
+                </div>
+                <div class="preview-actions">
+                    <a class="btn btn-primary" id="prev-open" target="_blank" rel="noopener"><span>Abrir completa</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <button class="modal-close static" type="button" data-close aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="preview-frame"><iframe id="prev-frame" title="Vista previa de la herramienta" loading="lazy"></iframe></div>
+        </div>
+    </dialog>
+
+    <dialog class="modal" id="dlg-palette" aria-label="Buscar en el sitio">
+        <div class="modal-card palette">
+            <div class="palette-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="palette-input" placeholder="Escribe una sección o acción…" autocomplete="off" aria-label="Buscar en el sitio" aria-controls="palette-list">
+                <kbd>Esc</kbd>
+            </div>
+            <ul class="palette-list" id="palette-list" role="listbox"></ul>
+            <p class="palette-foot"><kbd>↑</kbd><kbd>↓</kbd> <span>navegar</span> <kbd>Enter</kbd> <span>abrir</span> <kbd>Ctrl</kbd>+<kbd>K</kbd> <span>en cualquier momento</span></p>
+        </div>
+    </dialog>
 
     <script src="i18n.js"></script>
     <script>
@@ -1200,6 +1402,338 @@
         window.location.href = `mailto:jmorozco333@gmail.com?subject=${encodeURIComponent(f.subject.value)}&body=${encodeURIComponent(body)}`;
         document.getElementById('form-hint').textContent = L('form.opened', 'Listo: revisa tu aplicación de correo para enviarlo.');
     });
+
+    // ---------- Diálogos ----------
+    const dialogs = {
+        recruiter: document.getElementById('dlg-recruiter'),
+        automation: document.getElementById('dlg-automation'),
+        preview: document.getElementById('dlg-preview'),
+        palette: document.getElementById('dlg-palette'),
+    };
+    const openDialog = name => {
+        const d = dialogs[name];
+        if (!d) return;
+        Object.values(dialogs).forEach(o => { if (o !== d && o.open) o.close(); });
+        if (!d.open) d.showModal();
+        d.dispatchEvent(new Event('opened'));
+    };
+    document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openDialog(b.dataset.open)));
+    Object.values(dialogs).forEach(d => {
+        d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+    });
+
+    // Modo reclutador: barra de 30 segundos
+    dialogs.recruiter.addEventListener('opened', () => {
+        const bar = dialogs.recruiter.querySelector('.rec-progress span');
+        bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = '';
+    });
+
+    // ---------- Demo: de 12 horas a 10 minutos ----------
+    (() => {
+        const steps = [
+            ['Descargar datos del DANE y del Banco de la República', 180, 2],
+            ['Limpiar y homologar las fuentes', 180, 2],
+            ['Cruzar con los proyectos del portafolio', 120, 2],
+            ['Actualizar indicadores y tablas', 120, 2],
+            ['Generar gráficos e informe', 120, 2],
+        ];
+        const lanes = { manual: document.getElementById('lane-manual'), auto: document.getElementById('lane-auto') };
+        const playBtn = document.getElementById('auto-play');
+        const result = document.getElementById('auto-result');
+        const fmtH = m => `${Math.floor(m / 60)} h ${String(Math.round(m % 60)).padStart(2, '0')} min`;
+        const draw = () => {
+            ['manual', 'auto'].forEach((k, li) => {
+                lanes[k].querySelector('.auto-steps').innerHTML = steps.map(s =>
+                    `<li><i class="fa-regular fa-circle"></i><span>${T(s[0])}</span><em>${li ? s[2] + ' min' : (s[1] / 60) + ' h'}</em></li>`).join('');
+            });
+        };
+        const set = (k, frac) => {
+            const lane = lanes[k];
+            const total = k === 'manual' ? 720 : 10;
+            lane.querySelector('.auto-bar span').style.width = (frac * 100) + '%';
+            lane.querySelector('.auto-clock').textContent = k === 'manual' ? fmtH(frac * total) : `${Math.round(frac * total)} min`;
+            let acc = 0;
+            lane.querySelectorAll('.auto-steps li').forEach((li, i) => {
+                acc += k === 'manual' ? steps[i][1] : steps[i][2];
+                const done = frac * total >= acc - 0.001;
+                li.classList.toggle('done', done);
+                li.querySelector('i').className = done ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
+            });
+        };
+        let raf = null;
+        const reset = () => { cancelAnimationFrame(raf); set('manual', 0); set('auto', 0); result.textContent = ''; };
+        const play = () => {
+            reset();
+            const DUR = reduceMotion ? 1 : 6000;   // 12 horas en 6 segundos
+            const t0 = performance.now();
+            const tick = now => {
+                const p = Math.min(1, (now - t0) / DUR);
+                set('manual', p);
+                set('auto', Math.min(1, p * 72 * (reduceMotion ? 1 : 1)));   // 10 min de 720
+                if (p < 1) raf = requestAnimationFrame(tick);
+                else result.textContent = T('Ahorro: 11 h 50 min en cada actualización (−98,6 %).');
+            };
+            raf = requestAnimationFrame(tick);
+        };
+        draw(); reset();
+        playBtn.addEventListener('click', play);
+        dialogs.automation.addEventListener('opened', () => setTimeout(play, 350));
+        dialogs.automation.addEventListener('close', reset);
+        document.addEventListener('langchange', () => { draw(); reset(); });
+    })();
+
+    // ---------- Vista previa de herramientas ----------
+    (() => {
+        const frame = document.getElementById('prev-frame');
+        document.querySelectorAll('[data-preview]').forEach(a => a.addEventListener('click', e => {
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1 || window.innerWidth < 640) return;   // en móvil se abre directo
+            e.preventDefault();
+            document.getElementById('prev-title').textContent = T(a.dataset.name);
+            document.getElementById('prev-desc').textContent = T(a.dataset.desc);
+            document.getElementById('prev-open').href = a.href;
+            frame.src = a.href;
+            openDialog('preview');
+        }));
+        dialogs.preview.addEventListener('close', () => { frame.src = 'about:blank'; });
+    })();
+
+    // ---------- Paleta de comandos (Ctrl + K) ----------
+    (() => {
+        const input = document.getElementById('palette-input');
+        const list = document.getElementById('palette-list');
+        const go = id => () => { dialogs.palette.close(); document.getElementById(id).scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' }); };
+        const commands = [
+            { label: 'Inicio', icon: 'fa-house', run: go('home') },
+            { label: 'Sobre mí', icon: 'fa-user', run: go('about') },
+            { label: 'Mi trayectoria en el mapa', icon: 'fa-map-location-dot', run: () => { go('about')(); document.getElementById('view-map').click(); setTimeout(() => document.getElementById('jmap').scrollIntoView({ block: 'center' }), 50); } },
+            { label: 'Experiencia', icon: 'fa-briefcase', run: go('experience') },
+            { label: 'Habilidades', icon: 'fa-screwdriver-wrench', run: go('skills') },
+            { label: 'Investigación', icon: 'fa-flask', run: go('research') },
+            { label: 'Resultado del artículo Q1', icon: 'fa-chart-line', run: () => { dialogs.palette.close(); const b = document.getElementById('sc-toggle'); if (b.getAttribute('aria-expanded') !== 'true') b.click(); document.getElementById('sc-panel').scrollIntoView({ block: 'center' }); } },
+            { label: 'Proyectos', icon: 'fa-diagram-project', run: go('courses') },
+            { label: 'Contacto', icon: 'fa-envelope', run: go('contact') },
+            { label: 'Resumen en 30 s', icon: 'fa-bolt', run: () => openDialog('recruiter') },
+            { label: 'Demo: de 12 horas a 10 minutos', icon: 'fa-gears', run: () => openDialog('automation') },
+            { label: 'Descargar CV', icon: 'fa-file-arrow-down', run: () => { dialogs.palette.close(); window.open('./documents/Curriculum_Jorge_Orozco_v3.pdf', '_blank', 'noopener'); } },
+            { label: 'Copiar correo', icon: 'fa-copy', run: () => { navigator.clipboard && navigator.clipboard.writeText('jmorozco333@gmail.com'); input.value = ''; input.placeholder = T('Correo copiado: jmorozco333@gmail.com'); render(); } },
+            { label: 'Cambiar idioma', icon: 'fa-language', run: () => { dialogs.palette.close(); document.getElementById('lang-toggle').click(); } },
+            { label: 'Cambiar tema', icon: 'fa-circle-half-stroke', run: () => { dialogs.palette.close(); document.getElementById('theme-toggle').click(); } },
+            { label: 'LinkedIn', icon: 'fa-linkedin-in', brand: true, run: () => window.open('https://www.linkedin.com/in/eco-jorge-orozco/', '_blank', 'noopener') },
+            { label: 'GitHub', icon: 'fa-github', brand: true, run: () => window.open('https://github.com/Kin-George', '_blank', 'noopener') },
+        ];
+        const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+        let shown = [], active = 0;
+        function render() {
+            const q = fold(input.value.trim());
+            shown = commands.filter(c => !q || fold(T(c.label)).includes(q) || fold(c.label).includes(q));
+            active = Math.min(active, Math.max(0, shown.length - 1));
+            list.innerHTML = shown.length ? shown.map((c, i) =>
+                `<li role="option" id="pal-${i}" aria-selected="${i === active}" data-i="${i}"><i class="${c.brand ? 'fa-brands' : 'fa-solid'} ${c.icon}"></i><span>${T(c.label)}</span></li>`).join('')
+                : `<li class="empty">${T('Sin resultados')}</li>`;
+            input.setAttribute('aria-activedescendant', shown.length ? 'pal-' + active : '');
+        }
+        input.addEventListener('input', () => { active = 0; render(); });
+        input.addEventListener('keydown', e => {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                active = (active + (e.key === 'ArrowDown' ? 1 : -1) + shown.length) % Math.max(1, shown.length);
+                render();
+                const el = document.getElementById('pal-' + active); if (el) el.scrollIntoView({ block: 'nearest' });
+            } else if (e.key === 'Enter' && shown[active]) { e.preventDefault(); shown[active].run(); }
+        });
+        list.addEventListener('click', e => { const li = e.target.closest('li[data-i]'); if (li) shown[+li.dataset.i].run(); });
+        list.addEventListener('mousemove', e => { const li = e.target.closest('li[data-i]'); if (li && +li.dataset.i !== active) { active = +li.dataset.i; render(); } });
+        dialogs.palette.addEventListener('opened', () => { input.value = ''; input.placeholder = T('Escribe una sección o acción…'); active = 0; render(); setTimeout(() => input.focus(), 30); });
+        document.addEventListener('keydown', e => {
+            const typing = /input|textarea|select/i.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
+            if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); dialogs.palette.open ? dialogs.palette.close() : openDialog('palette'); }
+            else if (e.key === '/' && !typing && !dialogs.palette.open) { e.preventDefault(); openDialog('palette'); }
+        });
+        document.addEventListener('langchange', render);
+    })();
+
+    // ---------- Mapa de la trayectoria ----------
+    (() => {
+        const tlBtn = document.getElementById('view-tl'), mapBtn = document.getElementById('view-map');
+        const htl = document.getElementById('htl'), jmap = document.getElementById('jmap');
+        const filters = document.querySelector('.tl-filters');
+        const steps = [...document.querySelectorAll('.jmap-step')];
+        const r1 = document.getElementById('jmap-r1'), r2 = document.getElementById('jmap-r2');
+        let stop = 0, timer = null, userPaused = reduceMotion, hover = false, visible = false;
+
+        const setView = map => {
+            tlBtn.classList.toggle('active', !map); mapBtn.classList.toggle('active', map);
+            tlBtn.setAttribute('aria-selected', !map); mapBtn.setAttribute('aria-selected', map);
+            htl.hidden = map; jmap.hidden = !map; filters.hidden = map;
+            if (map) { show(0); schedule(); } else clearTimeout(timer);
+        };
+        function show(i) {
+            stop = (i + steps.length) % steps.length;
+            steps.forEach((s, j) => { s.classList.toggle('active', j === stop); s.classList.toggle('past', j < stop); s.querySelector('button').setAttribute('aria-current', j === stop ? 'step' : 'false'); });
+            jmap.querySelectorAll('.jmap-city').forEach(c => { const n = +c.dataset.stop; c.classList.toggle('active', n === stop); c.classList.toggle('past', n < stop); });
+            jmap.querySelector('.jmap-inset').classList.toggle('active', stop <= 1);
+            r1.classList.toggle('drawn', stop >= 2);
+            r2.classList.toggle('drawn', stop >= 3);
+        }
+        function schedule() {
+            clearTimeout(timer);
+            if (userPaused || jmap.hidden) return;
+            timer = setTimeout(() => { if (!hover && visible) show(stop + 1); schedule(); }, 5000);
+        }
+        const user = i => { userPaused = true; clearTimeout(timer); show(i); };
+        tlBtn.addEventListener('click', () => setView(false));
+        mapBtn.addEventListener('click', () => setView(true));
+        steps.forEach((s, i) => s.querySelector('button').addEventListener('click', () => user(i)));
+        jmap.querySelectorAll('.jmap-city').forEach(c => c.addEventListener('click', () => user(+c.dataset.stop)));
+        document.getElementById('jmap-prev').addEventListener('click', () => user(stop - 1));
+        document.getElementById('jmap-next').addEventListener('click', () => user(stop + 1));
+        jmap.addEventListener('mouseenter', () => hover = true);
+        jmap.addEventListener('mouseleave', () => hover = false);
+        new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.3 }).observe(jmap);
+        show(0);
+    })();
+
+    // ---------- Control sintético ----------
+    (() => {
+        const D = {"years":[1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994],"col":[3432.0,3427.0,3529.0,3629.0,3759.0,3783.0,3811.0,3826.0,3798.0,3942.0,3980.0,4049.0,4135.0,4140.0,4264.0,4286.0,4383.0,4438.0,4581.0,4744.0,4932.0,5091.0,5348.0,5577.0,5767.0,5772.0,5918.0,6046.0,6443.0,6658.0,6786.0,6782.0,6698.0,6655.0,6741.0,6809.0,7071.0,7296.0,7442.0,7533.0,7693.0,7713.0,7888.1,8180.9,8447.9],"syn":[3528.3,3585.9,3530.7,3682.8,3757.6,3770.8,3843.1,3875.3,3840.2,3856.8,3901.5,4230.2,4271.4,4490.6,4303.3,4456.5,4455.4,4578.9,4544.4,4764.4,4884.2,5101.8,5324.6,5639.6,5760.8,5771.6,6462.6,6775.6,7022.7,7379.4,7456.3,7704.5,7642.7,7573.6,7810.2,7977.5,8285.8,8727.8,9126.0,9498.6,9883.8,10042.3,10465.3,10733.5,11133.1]};
+        const plot = document.getElementById('sc-plot');
+        const toggle = document.getElementById('sc-toggle');
+        const panel = document.getElementById('sc-panel');
+        const slider = document.getElementById('sc-year');
+        const out = document.getElementById('sc-year-out');
+        const tip = document.getElementById('sc-tip');
+        let W = 640, H = 300, M = { t: 16, r: 120, b: 28, l: 46 };
+        const x0 = 1950, x1 = 1994, yMin = 3000, yMax = 12000, T0 = 1976;
+        const X = yr => M.l + (yr - x0) / (x1 - x0) * (W - M.l - M.r);
+        const Y = v => M.t + (1 - (v - yMin) / (yMax - yMin)) * (H - M.t - M.b);
+        const NS = 'http://www.w3.org/2000/svg';
+        const el = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); return e; };
+        const line = arr => arr.map((v, i) => `${i ? 'L' : 'M'}${X(D.years[i]).toFixed(1)},${Y(v).toFixed(1)}`).join('');
+        const idx = yr => D.years.indexOf(yr);
+        const pct = yr => { const i = idx(yr); return (D.col[i] - D.syn[i]) / D.syn[i] * 100; };
+        const fmt = n => Math.round(n).toLocaleString(document.documentElement.lang === 'en' ? 'en-US' : 'es-CO');
+        let svg, gapPath, cursor;
+
+        function build() {
+            const en = document.documentElement.lang === 'en';
+            const small = plot.clientWidth < 520;
+            W = small ? 360 : 640; H = small ? 270 : 300;
+            M = small ? { t: 16, r: 100, b: 26, l: 34 } : { t: 16, r: 120, b: 28, l: 46 };
+            plot.innerHTML = '';
+            svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': en ? 'GDP per capita: Colombia vs synthetic Colombia, 1950–1994' : 'PIB per cápita: Colombia frente a Colombia sintética, 1950–1994' });
+            for (let v = 4000; v <= 12000; v += 2000) {
+                svg.appendChild(el('line', { x1: M.l, x2: W - M.r, y1: Y(v), y2: Y(v), class: 'grid' }));
+                const t = el('text', { x: M.l - 8, y: Y(v) + 3.5, class: 'axis', 'text-anchor': 'end' }); t.textContent = (v / 1000) + 'k'; svg.appendChild(t);
+            }
+            for (let yr = 1950; yr <= 1990; yr += 10) { const t = el('text', { x: X(yr), y: H - 8, class: 'axis', 'text-anchor': 'middle' }); t.textContent = yr; svg.appendChild(t); }
+            svg.appendChild(el('line', { x1: M.l, x2: W - M.r, y1: H - M.b, y2: H - M.b, class: 'base' }));
+            gapPath = el('path', { class: 'sc-gap' }); svg.appendChild(gapPath);
+            svg.appendChild(el('line', { x1: X(T0), x2: X(T0), y1: M.t, y2: H - M.b, class: 'sc-t0' }));
+            const t0 = el('text', { x: X(T0) - 6, y: M.t + 10, class: 'axis', 'text-anchor': 'end' }); t0.textContent = en ? '1976: violence escalates' : '1976: escalada de la violencia'; svg.appendChild(t0);
+            svg.appendChild(el('path', { d: line(D.syn), class: 'sc-line syn' }));
+            svg.appendChild(el('path', { d: line(D.col), class: 'sc-line col' }));
+            const last = D.years.length - 1;
+            const l1 = el('text', { x: X(x1) + 8, y: Y(D.syn[last]) + 4, class: 'sc-lab' }); l1.textContent = en ? 'Synthetic Colombia' : 'Colombia sintética'; svg.appendChild(l1);
+            const l2 = el('text', { x: X(x1) + 8, y: Y(D.col[last]) + 4, class: 'sc-lab' }); l2.textContent = 'Colombia'; svg.appendChild(l2);
+            cursor = el('g', { class: 'sc-cursor' });
+            cursor.appendChild(el('line', { y1: M.t, y2: H - M.b }));
+            cursor.appendChild(el('circle', { r: 4.5, class: 'c-syn' }));
+            cursor.appendChild(el('circle', { r: 4.5, class: 'c-col' }));
+            svg.appendChild(cursor);
+            const hit = el('rect', { x: M.l, y: M.t, width: W - M.l - M.r, height: H - M.t - M.b, fill: 'transparent' });
+            svg.appendChild(hit);
+            hit.addEventListener('pointermove', e => {
+                const r = svg.getBoundingClientRect();
+                const vx = (e.clientX - r.left) / r.width * W;
+                const yr = Math.max(x0, Math.min(x1, Math.round(x0 + (vx - M.l) / (W - M.l - M.r) * (x1 - x0))));
+                moveCursor(yr, true);
+            });
+            hit.addEventListener('pointerleave', () => { tip.hidden = true; moveCursor(+slider.value, false); });
+            plot.appendChild(svg);
+            document.getElementById('sc-table').innerHTML = `<caption>${en ? 'GDP per capita (PPP)' : 'PIB per cápita (PPA)'}</caption><tr><th>${en ? 'Year' : 'Año'}</th><th>Colombia</th><th>${en ? 'Synthetic' : 'Sintética'}</th></tr>` +
+                D.years.map((y, i) => `<tr><td>${y}</td><td>${D.col[i]}</td><td>${D.syn[i]}</td></tr>`).join('');
+            update();
+        }
+        function moveCursor(yr, withTip) {
+            const i = idx(yr), cx = X(yr);
+            cursor.querySelector('line').setAttribute('x1', cx); cursor.querySelector('line').setAttribute('x2', cx);
+            cursor.querySelector('.c-syn').setAttribute('cx', cx); cursor.querySelector('.c-syn').setAttribute('cy', Y(D.syn[i]));
+            cursor.querySelector('.c-col').setAttribute('cx', cx); cursor.querySelector('.c-col').setAttribute('cy', Y(D.col[i]));
+            if (!withTip) return;
+            const en = document.documentElement.lang === 'en';
+            tip.hidden = false;
+            tip.innerHTML = `<strong>${yr}</strong><span><i style="background:var(--c1)"></i>Colombia: ${fmt(D.col[i])}</span><span><i style="background:var(--c2)"></i>${en ? 'Synthetic' : 'Sintética'}: ${fmt(D.syn[i])}</span>`;
+            const r = svg.getBoundingClientRect(), pr = plot.getBoundingClientRect();
+            tip.style.left = (cx / W * r.width) + 'px';
+            tip.style.top = (plot.offsetTop + Y(Math.max(D.col[i], D.syn[i])) / H * r.height) + 'px';
+        }
+        function update() {
+            const yr = +slider.value, en = document.documentElement.lang === 'en';
+            out.textContent = yr;
+            const a = idx(T0), b = idx(yr);
+            const top = D.syn.slice(a, b + 1).map((v, k) => `${k ? 'L' : 'M'}${X(D.years[a + k]).toFixed(1)},${Y(v).toFixed(1)}`).join('');
+            const bot = D.col.slice(a, b + 1).map((v, k) => `L${X(D.years[a + k]).toFixed(1)},${Y(v).toFixed(1)}`).reverse().join('');
+            gapPath.setAttribute('d', yr > T0 ? top + bot + 'Z' : '');
+            const p = pct(yr);
+            document.getElementById('sc-gap').textContent = (p < 0 ? '−' : '+') + Math.abs(p).toFixed(0) + ' %';
+            document.getElementById('sc-text').textContent = en
+                ? `In ${yr}, Colombia’s GDP per capita was ${Math.abs(p).toFixed(0)}% ${p < 0 ? 'below' : 'above'} its synthetic counterpart.`
+                : `En ${yr}, el PIB per cápita de Colombia fue ${Math.abs(p).toFixed(0)} % ${p < 0 ? 'menor' : 'mayor'} que el de su contraparte sintética.`;
+            moveCursor(yr, false);
+        }
+        slider.addEventListener('input', update);
+        let rz; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (svg && !panel.hidden) build(); }, 200); });
+        toggle.addEventListener('click', () => {
+            const open = toggle.getAttribute('aria-expanded') !== 'true';
+            toggle.setAttribute('aria-expanded', open);
+            panel.hidden = !open;
+            toggle.querySelector('span').textContent = T(open ? 'Ocultar el resultado' : 'Explorar el resultado');
+            if (open && !svg) build();
+            if (open && !reduceMotion) {   // la brecha se abre año a año
+                let yr = T0; slider.value = yr; update();
+                const iv = setInterval(() => { yr++; slider.value = yr; update(); if (yr >= 1994) clearInterval(iv); }, 70);
+            }
+        });
+        document.addEventListener('langchange', () => {
+            if (svg) build();
+            toggle.querySelector('span').textContent = T(toggle.getAttribute('aria-expanded') === 'true' ? 'Ocultar el resultado' : 'Explorar el resultado');
+        });
+    })();
+
+    // ---------- Saludo según la hora ----------
+    (() => {
+        const g = document.getElementById('greeting');
+        const set = () => {
+            const hr = new Date().getHours();
+            const s = hr >= 5 && hr < 12 ? 'Buenos días' : hr >= 12 && hr < 19 ? 'Buenas tardes' : 'Buenas noches';
+            g.innerHTML = `<span class="wave" aria-hidden="true">👋</span> ${T(s)} · ${T('gracias por pasar por aquí')}`;
+        };
+        set();
+        document.addEventListener('langchange', set);
+    })();
+
+    // ---------- Microinteracciones: botones magnéticos y foco de luz ----------
+    if (finePointer && !reduceMotion) {
+        document.querySelectorAll('.home-actions .btn, .contact-card .btn, .featured-actions .btn').forEach(b => {
+            b.classList.add('magnetic');
+            b.addEventListener('pointermove', e => {
+                const r = b.getBoundingClientRect();
+                const dx = (e.clientX - r.left - r.width / 2) / r.width, dy = (e.clientY - r.top - r.height / 2) / r.height;
+                b.style.transform = `translate(${dx * 10}px, ${dy * 8}px)`;
+            });
+            b.addEventListener('pointerleave', () => { b.style.transform = ''; });
+        });
+        const hero = document.querySelector('.hero-wrap');
+        hero.addEventListener('pointermove', e => {
+            const r = hero.getBoundingClientRect();
+            hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+            hero.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+        });
+    }
+
+    // ---------- Para quien abre la consola ----------
+    console.log('%c¡Hola, curioso! 👋', 'font: 700 16px Noto Sans, sans-serif; color: #22d3ee');
+    console.log('Este sitio está hecho a mano con HTML, CSS y JavaScript. El código está en https://github.com/Kin-George/Jorge-M.-Orozco · Escríbeme: jmorozco333@gmail.com');
 
     // Menú móvil
     const menuBtn = document.getElementById('menu-icons');

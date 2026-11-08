@@ -160,7 +160,7 @@
             <div class="stat"><strong data-count="9">9</strong><span>Publicaciones, informes y columnas</span></div>
             <div class="stat"><strong>Q1</strong><span>Artículo en revista indexada</span></div>
             <div class="stat"><strong data-count="5">5</strong><span>Herramientas web interactivas</span></div>
-            <button type="button" class="stat stat-btn" data-open="automation"><strong>12 h <small>→</small> 10 min</strong><span>Tareas automatizadas en el World Bank</span><em class="stat-cta"><i class="fa-solid fa-play"></i> <span>Ver cómo</span></em></button>
+            <button type="button" class="stat stat-btn" data-open="automation"><strong>12 h <small>→</small> 10 min</strong><span>Tareas automatizadas en el World Bank</span><em class="stat-cta"><span class="stat-cta-icon"><i class="fa-solid fa-play"></i></span><span>Ver cómo</span></em></button>
         </div>
 
         <div class="orgs reveal">
@@ -177,23 +177,15 @@
         <section class="about" id="about">
             <div class="section-head">
                 <p class="eyebrow">Sobre mí</p>
-                <h2 class="subtitle">Economía con perspectiva y datos</h2>
+                <h2 class="subtitle">Convierto preguntas difíciles en evidencia útil</h2>
             </div>
 
-            <div class="about-grid">
-                <div class="about-intro reveal">
-                    <p>
-                        Desde niño me he caracterizado por ser una persona creativa, que vive en su propio mundo analizando todo lo que le rodea.
-                        Decidí ser economista porque considero que mi profesión me da herramientas para ofrecer nuevas perspectivas
-                        y proponer soluciones fuera de lo común.
-                    </p>
-                    <p>
-                        Hoy trabajo en el World Bank Group en Bogotá y como consultor de investigación en el Centro Javeriano de Competitividad,
-                        donde estudio la productividad, el empleo y el impacto de la inteligencia artificial en Colombia.
-                    </p>
-
+            <div class="about-v2">
+                <div class="about-lead reveal">
+                    <p class="about-big">Soy economista del Caribe colombiano. Trabajo donde se cruzan la investigación económica, los datos y la política pública: hoy en el <strong>World Bank Group</strong> y en el <strong>Centro Javeriano de Competitividad</strong>.</p>
+                    <p class="about-note"><i class="fa-solid fa-quote-left"></i> <span>Desde niño analizo todo lo que me rodea. La economía me dio las herramientas para proponer soluciones fuera de lo común.</span></p>
                     <div class="interests">
-                        <h3 class="mini-title">Áreas de interés</h3>
+                        <h3 class="mini-title">Temas que investigo</h3>
                         <ul class="chips">
                             <li><i class="fa-solid fa-seedling"></i> Economía del desarrollo</li>
                             <li><i class="fa-solid fa-hand-holding-heart"></i> Mercado laboral y pobreza</li>
@@ -203,298 +195,312 @@
                         </ul>
                     </div>
                 </div>
+
+                <ol class="pillars reveal">
+                    <li class="pillar">
+                        <span class="pillar-n">01</span>
+                        <span class="pillar-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                        <h3>La pregunta</h3>
+                        <p>Planteo preguntas de política con rigor causal: ¿cuánto le costó el conflicto a Colombia?, ¿por qué no crece la productividad?</p>
+                        <span class="pillar-proof"><i class="fa-solid fa-check"></i> <span>Artículo Q1 con control sintético</span></span>
+                    </li>
+                    <li class="pillar">
+                        <span class="pillar-n">02</span>
+                        <span class="pillar-icon"><i class="fa-solid fa-database"></i></span>
+                        <h3>Los datos</h3>
+                        <p>Automatizo el procesamiento de encuestas y cuentas nacionales para que sea rápido, documentado y replicable.</p>
+                        <span class="pillar-proof"><i class="fa-solid fa-check"></i> <span>Tareas de 12 h reducidas a 10 min</span></span>
+                    </li>
+                    <li class="pillar">
+                        <span class="pillar-n">03</span>
+                        <span class="pillar-icon"><i class="fa-solid fa-chart-simple"></i></span>
+                        <h3>La decisión</h3>
+                        <p>Traduzco los resultados en dashboards, herramientas web e informes que entienden quienes deciden.</p>
+                        <span class="pillar-proof"><i class="fa-solid fa-check"></i> <span>5 herramientas web para públicos no técnicos</span></span>
+                    </li>
+                </ol>
             </div>
 
-            <!-- Timeline horizontal -->
-            <div class="journey">
+            <!-- Trayectoria en el mapa -->
+            <div class="journey" id="journey">
                 <div class="journey-head">
-                    <div class="journey-title-wrap">
-                        <h3 class="journey-title">Mi trayectoria</h3>
-                        <div class="view-switch" role="tablist" aria-label="Vista de la trayectoria">
-                            <button type="button" role="tab" id="view-tl" aria-controls="htl" aria-selected="true" class="active"><i class="fa-solid fa-timeline"></i> <span>Línea de tiempo</span></button>
-                            <button type="button" role="tab" id="view-map" aria-controls="jmap" aria-selected="false"><i class="fa-solid fa-map-location-dot"></i> <span>Mapa</span></button>
-                        </div>
-                    </div>
-                    <div class="tl-filters" role="group" aria-label="Filtrar la trayectoria">
-                        <button class="tl-filter active" data-filter="all" aria-pressed="true">Todo</button>
-                        <button class="tl-filter" data-filter="personal" aria-pressed="false">Personal</button>
-                        <button class="tl-filter" data-filter="formacion" aria-pressed="false">Formación</button>
-                        <button class="tl-filter" data-filter="profesional" aria-pressed="false">Profesional</button>
-                        <button class="tl-filter" data-filter="docencia" aria-pressed="false">Docencia</button>
-                        <button class="tl-filter" data-filter="investigacion" aria-pressed="false">Investigación</button>
-                        <button class="tl-filter" data-filter="logro" aria-pressed="false">Logros</button>
-                    </div>
+                    <h3 class="journey-title">Mi trayectoria</h3>
+                    <p class="journey-sub">De Malambo a Bogotá, pasando por Santiago de Chile: 17 momentos en 4 ciudades y más de 9.200 km.</p>
                 </div>
 
-                <div class="htl" id="htl" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Mi trayectoria. Usa las flechas para avanzar.">
-                    <div class="htl-viewport" id="htl-viewport">
-                        <ol class="htl-track" id="htl-track">
-                            <li class="htl-line" aria-hidden="true"><span id="htl-line-fill"></span></li>
-                            <li class="htl-item" data-cat="personal">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2001: El comienzo">
-                                    <span class="htl-year">2001</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-baby"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Personal</span>
-                                    <h4>El comienzo</h4>
-                                    <p>Nací en 2001. Desde niño me caractericé por ser creativo y por vivir analizando el mundo que me rodea.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="personal formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2004: Mis primeras letras">
-                                    <span class="htl-year">2004</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-shapes"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Formación</span>
-                                    <h4>Mis primeras letras</h4>
-                                    <p>A los 3 años empecé mi educación en una escuelita comunitaria.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2007 – 2012: Primaria en La Esperanza y Simón Bolívar">
-                                    <span class="htl-year">2007 – 2012</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-school"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Formación</span>
-                                    <h4>Primaria: La Esperanza y Simón Bolívar</h4>
-                                    <p>Estudié hasta cuarto grado en la Escuela La Esperanza, un colegio informal, y cursé quinto en la Institución Educativa Simón Bolívar, de educación pública.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2013 – 2018: Secundaria en la Unidad Pedagógica Bolivariana">
-                                    <span class="htl-year">2013 – 2018</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-book-open"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Formación</span>
-                                    <h4>Secundaria: Unidad Pedagógica Bolivariana</h4>
-                                    <p>Hice el bachillerato en esta institución privada, donde me gradué con excelencia académica.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="logro">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2018: 377 en las Pruebas Saber 11">
-                                    <span class="htl-year">2018</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-award"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Logro</span>
-                                    <h4>377 en las Pruebas Saber 11</h4>
-                                    <p>Uno de los mejores puntajes del país, que me valió la Beca Excelencia del Gobierno Nacional para estudiar en la Universidad del Norte.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="personal formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2019 – 2023: Economía en la Universidad del Norte">
-                                    <span class="htl-year">2019 – 2023</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-bus"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Personal · Formación</span>
-                                    <h4>Economía en la Universidad del Norte</h4>
-                                    <p>Pregrado becado en Barranquilla. Viajaba a diario desde Malambo: unas dos horas solo para llegar a clase.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2021 – 2022: Diplomado Misión TIC">
-                                    <span class="htl-year">2021 – 2022</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-laptop-code"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Formación</span>
-                                    <h4>Diplomado Misión TIC</h4>
-                                    <p>Formación en programación con la Universidad Sergio Arboleda y el Ministerio TIC.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="profesional">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Dic 2022 – Jul 2023: Analista de Datos e Investigación">
-                                    <span class="htl-year">Dic 2022 – Jul 2023</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-chart-column"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Profesional</span>
-                                    <h4>Analista de Datos e Investigación</h4>
-                                    <p>Departamento de Economía, Universidad del Norte: informalidad y pobreza, análisis con NLP de datos de X/Twitter y dashboards para el Observatorio OCSA.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="docencia">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Feb – May 2023: Instructor de Python y tutor de Econometría II">
-                                    <span class="htl-year">Feb – May 2023</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-chalkboard-user"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Docencia</span>
-                                    <h4>Instructor de Python y tutor de Econometría II</h4>
-                                    <p>Diseñé el currículo del curso de análisis de datos con Python de la Universidad del Norte, dicté las clases y gestioné su repositorio en GitHub.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="logro">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2023: Grado con honores">
-                                    <span class="htl-year">2023</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-medal"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Logro</span>
-                                    <h4>Grado con honores</h4>
-                                    <p>Medalla de Plata por el mayor promedio académico, Premio al Mérito Científico y tesis Cum Laude sobre la pobreza en Barranquilla.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="investigacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2023: Primeras publicaciones">
-                                    <span class="htl-year">2023</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-pen-nib"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Investigación</span>
-                                    <h4>Primeras publicaciones</h4>
-                                    <p>Documento sobre informalidad y pobreza (Serie Documentos n.º 55, Uninorte), ponencia en AFADECO y columna en Contexto.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="personal formacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Jul 2023 – Abr 2025: Rumbo a Santiago de Chile">
-                                    <span class="htl-year">Jul 2023 – Abr 2025</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-plane-departure"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Personal · Formación</span>
-                                    <h4>Rumbo a Santiago de Chile</h4>
-                                    <p>Me mudé a Chile para cursar el Magíster en Economía en la Universidad Alberto Hurtado con la beca ILADES.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="docencia">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Ago – Dic 2024: Tutor académico en la FEN-UAH">
-                                    <span class="htl-year">Ago – Dic 2024</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-person-chalkboard"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Docencia</span>
-                                    <h4>Tutor académico en la FEN-UAH</h4>
-                                    <p>Microeconomía I (maestría), Estadística y Probabilidad en R, Estadística Inferencial en R y Series de tiempo en R.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="logro investigacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a 2025: Magna Cum Laude y artículo Q1">
-                                    <span class="htl-year">2025</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-graduation-cap"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Logro · Investigación</span>
-                                    <h4>Magna Cum Laude y artículo Q1</h4>
-                                    <p>Mi tesis sobre el costo económico del conflicto armado obtuvo Magna Cum Laude, y con Carlos Díaz publiqué en Defence and Peace Economics (Q1).</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="profesional personal">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Feb 2025 – Hoy: World Bank Group">
-                                    <span class="htl-year">Feb 2025 – Hoy</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-earth-americas"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Profesional</span>
-                                    <h4>World Bank Group</h4>
-                                    <p>Country Program and Portfolio Analyst en Bogotá: automatizo flujos de datos (de 12 horas a 10 minutos), creo dashboards del portafolio y aporto a productos como el Diagnóstico de País.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="profesional investigacion">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Abr 2026 – Hoy: Centro Javeriano de Competitividad">
-                                    <span class="htl-year">Abr 2026 – Hoy</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Profesional · Investigación</span>
-                                    <h4>Centro Javeriano de Competitividad</h4>
-                                    <p>Consultor de investigación en productividad, empleo e inteligencia artificial. Desarrollé cinco herramientas web interactivas para públicos no técnicos.</p>
-                                </article>
-                            </li>
-                            <li class="htl-item" data-cat="personal">
-                                <button class="htl-node" type="button" tabindex="-1" aria-label="Ir a Hoy: Lo que viene">
-                                    <span class="htl-year">Hoy</span>
-                                    <span class="htl-dot"><i class="fa-solid fa-rocket"></i></span>
-                                </button>
-                                <article class="htl-card">
-                                    <span class="tl-cat">Personal</span>
-                                    <h4>Lo que viene</h4>
-                                    <p>ChicoPython, mi proyecto de contenido educativo de análisis de datos, y las ganas de seguir investigando y aprendiendo.</p>
-                                </article>
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div class="htl-controls">
-                        <button class="htl-btn" id="htl-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
-                        <button class="htl-btn htl-play" id="htl-play" aria-label="Pausar avance automático"><span class="htl-play-inner"><i class="fa-solid fa-pause"></i></span></button>
-                        <button class="htl-btn" id="htl-next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
-                        <input type="range" class="htl-scrub" id="htl-scrub" min="0" max="16" step="1" value="0" aria-label="Recorrer la trayectoria">
-                        <span class="htl-counter" id="htl-counter" aria-live="polite">1 / 1</span>
-                    </div>
-                </div>
-
-                <div class="jmap" id="jmap" role="region" aria-label="Mapa de mi recorrido" hidden>
+                <div class="jmap" id="jmap" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Mi trayectoria. Usa las flechas para avanzar.">
                     <div class="jmap-figure">
-                        <svg class="jmap-svg" viewBox="0 0 400 470" role="img" aria-label="Mapa del recorrido: Malambo, Barranquilla, Santiago de Chile y Bogotá">
-                            <defs>
-                                <linearGradient id="jmap-fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.82" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-                                <mask id="jmap-mask"><rect width="400" height="470" fill="url(#jmap-fade)"/></mask>
-                            </defs>
-                            <g class="jmap-land" mask="url(#jmap-mask)">
-                                <path d="M164,22L164,24L162,23L160,23L161,22L164,22ZM192,42L194,44L193,45L191,46L190,47L188,48L187,50L188,51L190,52L190,54L188,55L186,56L184,56L184,58L184,60L183,61L184,64L186,66L187,67L188,69L187,71L185,72L184,73L182,74L179,75L177,76L175,75L173,76L172,79L171,80L169,79L168,77L166,77L165,77L163,77L162,76L159,76L158,75L158,77L161,79L161,82L162,84L163,86L163,88L165,89L167,89L167,91L165,92L163,92L162,94L161,96L160,96L158,97L156,98L155,99L154,100L152,102L151,100L150,100L148,101L146,102L144,100L142,98L141,96L141,94L140,92L140,91L139,89L138,88L137,87L135,86L137,83L138,82L137,79L136,78L135,76L135,74L134,72L135,70L135,67L136,66L136,64L137,62L137,60L135,59L134,59L130,60L128,60L125,60L124,60L122,59L120,58L119,56L118,54L116,54L114,53L111,54L108,53L105,54L103,53L102,51L100,50L100,48L101,46L101,44L100,42L98,40L98,38L96,37L94,37L95,35L96,33L97,30L97,27L98,25L99,23L102,22L104,18L106,17L108,17L105,18L104,20L105,22L106,23L107,25L106,27L105,29L103,32L104,33L105,35L106,37L107,38L109,37L110,36L111,33L110,31L108,29L108,27L107,25L109,23L112,21L114,21L117,20L118,19L120,19L119,18L117,18L116,16L117,15L119,14L120,17L121,19L124,19L127,20L129,21L130,22L131,23L131,25L132,27L134,27L136,27L140,26L146,26L147,27L149,29L152,29L155,30L157,30L162,27L164,27L162,26L164,26L167,26L169,25L171,25L173,25L176,25L179,25L176,26L173,26L171,27L173,28L173,30L175,31L176,32L178,32L180,33L181,31L183,33L185,34L187,36L185,37L184,39L184,40L181,41L183,43L185,42L187,41L189,42L191,41Z"/>
-                                <path d="M242,366L240,368L239,370L237,372L236,373L230,375L228,375L225,374L221,375L219,375L216,373L214,372L211,372L209,372L208,370L206,369L204,367L204,364L205,362L206,361L206,359L206,356L207,355L206,353L207,351L207,349L208,347L208,346L209,344L208,342L210,340L210,339L212,340L214,339L216,338L219,341L221,342L222,344L222,346L224,345L225,344L227,345L228,347L229,347L233,349L234,351L236,352L238,353L239,354L240,356L242,357L243,358L242,360L241,361L241,364L241,366Z"/>
-                                <path d="M236,66L235,68L234,69L234,71L234,73L234,75L235,77L236,79L237,81L236,83L236,85L234,88L233,89L231,89L230,87L227,88L225,89L223,88L222,89L223,91L223,93L221,93L219,93L217,92L216,90L215,89L214,87L213,85L213,84L213,82L211,82L209,80L208,78L207,77L207,75L208,73L209,72L208,70L210,69L212,69L213,68L213,66L214,64L214,62L219,62L220,62L223,63L225,61L227,62L229,61L231,61L234,62L236,62L237,64L236,66Z"/>
-                                <path d="M119,140L117,140L116,139L114,139L112,140L110,141L108,141L106,142L104,142L102,144L100,145L99,146L97,147L97,150L96,152L95,154L95,155L95,157L93,159L91,160L90,162L91,163L89,164L89,166L90,167L91,169L92,170L93,172L94,173L95,174L96,176L96,178L98,180L100,180L102,181L102,183L105,184L107,184L109,184L110,183L112,182L114,180L114,182L114,184L114,185L114,189L114,190L115,192L117,192L119,191L121,191L123,193L124,196L126,198L126,200L127,201L128,203L127,205L126,206L126,210L126,212L126,215L127,216L126,218L125,219L124,220L123,222L125,224L124,225L123,227L124,231L127,232L126,234L125,236L123,238L121,239L122,241L121,243L120,245L119,247L117,248L115,248L112,246L111,244L109,243L108,241L105,239L104,238L102,237L100,235L98,235L94,233L91,232L88,229L86,229L85,228L81,226L79,224L78,222L76,221L75,220L73,217L72,216L71,214L73,211L71,208L70,206L68,203L67,201L66,200L65,197L62,194L62,192L59,186L57,183L56,179L55,178L54,174L52,172L52,170L51,169L49,167L47,164L46,162L45,160L44,158L38,156L37,154L36,153L38,152L38,151L36,147L36,145L35,143L35,141L38,137L40,135L42,133L43,135L43,137L42,138L41,140L41,141L43,141L45,141L47,142L48,143L49,145L51,146L52,144L54,143L54,141L55,139L55,138L56,136L57,134L58,133L60,131L62,130L64,129L68,128L70,126L72,125L75,122L76,121L77,119L78,117L78,116L80,115L79,113L78,110L77,109L79,108L80,108L82,109L83,110L85,111L86,113L87,114L88,115L90,117L92,117L93,119L94,121L95,123L95,125L97,126L98,126L100,126L102,126L104,125L105,124L107,124L109,125L111,124L113,125L115,126L116,127L118,128L117,129L116,131L115,133L114,135L113,136L115,137L116,137L117,138L119,140Z"/>
-                                <path d="M206,262L207,264L207,265L208,267L209,269L208,271L208,273L208,275L208,277L209,277L211,278L213,278L215,278L217,278L218,277L220,278L222,278L223,278L224,280L225,282L225,283L226,286L226,287L226,289L227,291L228,292L230,291L232,290L234,291L235,292L235,294L235,295L234,298L234,300L233,302L232,307L232,309L231,311L230,312L229,314L227,314L225,316L225,317L223,317L222,317L220,318L218,318L216,318L214,318L212,318L209,317L206,317L203,317L203,315L205,314L206,312L206,310L207,308L208,307L209,305L210,304L210,302L209,300L206,299L205,299L202,297L199,296L197,295L195,293L193,292L192,291L189,291L186,290L185,290L184,288L182,287L181,286L179,285L177,283L176,281L175,279L173,278L174,276L174,274L175,272L176,269L176,267L176,265L177,263L178,261L179,259L181,258L184,257L189,256L193,255L196,255L199,255L202,257L204,258L206,259L206,262Z"/>
-                                <path d="M64,41L64,43L65,45L65,46L64,48L63,49L61,48L61,50L60,52L58,50L56,47L57,45L58,43L60,44L61,45L59,44L58,43L56,43L55,41L53,40L51,38L49,38L47,39L46,41L44,43L42,44L41,45L43,47L44,49L44,50L42,50L41,52L39,52L38,52L37,48L35,49L33,48L32,46L31,45L29,44L27,44L25,44L23,45L22,44L23,42L23,40L24,39L23,38L23,35L24,34L26,34L27,36L28,37L29,39L30,39L33,40L36,40L38,39L40,38L43,37L45,36L46,35L49,34L51,34L54,35L59,37L61,38L61,39L64,41Z"/>
-                                <path d="M21,-8L20,-6L21,-3L20,0L19,2L18,5L18,8L18,11L17,11L17,13L17,15L16,16L17,17L16,19L16,21L17,23L17,25L14,25L12,23L10,23L8,23L6,23L3,22L2,23L0,20L-3,17L-5,15L-6,13L-8,12L-11,10L-12,8L-11,8L-8,8L-7,6L-5,5L-6,3L-3,2L-1,0L2,1L3,0L5,-2L6,-3L7,-4L8,-6L9,-5L11,-5L13,-6L15,-6L17,-7L18,-7L21,-8Z"/>
-                                <path d="M187,67L186,66L184,64L182,62L184,60L184,58L184,57L185,56L187,55L190,54L190,53L188,52L188,51L188,49L189,47L191,47L192,46L194,44L192,42L194,43L196,44L199,45L201,48L203,49L204,51L204,53L203,55L203,58L204,56L205,55L207,55L209,57L210,58L212,59L213,61L214,62L213,65L212,66L213,68L211,69L209,70L208,71L208,73L207,75L207,77L208,78L209,80L210,82L213,81L213,83L213,85L214,86L215,88L216,90L217,91L218,92L217,93L215,93L213,92L211,94L209,94L207,95L206,95L204,96L203,98L201,98L199,97L198,96L196,95L195,94L194,92L194,90L193,88L193,84L194,82L194,80L195,79L196,77L195,75L195,74L193,73L191,73L192,71L193,69L192,68L190,67L188,68Z"/>
-                                <path d="M79,108L77,108L78,110L79,111L80,115L78,116L78,117L77,119L76,121L75,122L73,124L71,125L69,127L65,128L63,129L60,130L59,132L58,133L56,135L56,137L55,138L54,140L54,142L53,143L52,145L50,145L49,144L48,142L46,142L44,141L42,141L42,140L41,138L42,138L43,136L43,134L43,133L45,132L46,129L46,127L46,125L46,124L45,126L43,127L42,128L39,126L38,125L39,123L39,121L39,118L38,116L40,114L41,113L42,112L41,111L42,109L43,107L44,104L44,101L46,100L48,99L50,99L53,98L53,96L54,98L57,99L59,100L61,101L62,102L64,104L65,105L67,105L69,105L71,105L72,104L74,105L75,106L77,107L79,108ZM43,130L43,128L44,128L43,130Z"/>
-                                <path d="M25,34L24,34L23,36L24,38L23,40L23,42L22,43L23,45L22,44L21,42L20,41L20,43L18,43L17,41L18,40L17,38L16,36L14,35L11,34L10,33L7,30L6,29L6,31L8,32L7,33L5,32L3,31L1,30L1,28L2,26L1,24L2,23L3,22L5,22L8,23L10,23L11,23L13,24L15,25L17,24L19,27L21,30L23,32L25,34Z"/>
-                                <path d="M109,16L107,17L104,18L102,22L100,23L99,24L97,27L97,29L96,32L95,34L94,36L96,36L97,37L98,40L99,41L101,43L101,45L100,47L100,50L101,51L103,53L105,54L107,53L109,54L113,53L115,53L117,54L119,56L120,58L122,59L123,60L124,60L126,60L130,60L132,60L134,59L137,59L137,61L136,63L136,65L135,66L135,68L134,72L135,73L135,75L136,78L137,79L138,81L137,83L135,85L136,86L138,88L139,89L140,91L140,92L141,94L141,96L142,98L140,98L140,95L139,93L138,92L137,91L135,93L134,94L133,93L132,94L128,94L127,94L124,94L122,94L120,94L120,97L120,99L121,99L123,99L124,100L125,102L123,102L121,102L120,103L118,104L118,106L118,108L119,110L120,111L122,112L122,114L123,116L123,118L122,121L122,123L121,125L121,128L121,130L120,133L120,135L119,138L119,140L117,138L116,137L115,137L113,136L114,135L115,133L116,131L117,129L118,128L116,127L115,126L113,125L112,124L110,125L108,125L106,124L104,125L103,126L101,126L99,125L97,126L95,125L95,123L95,121L93,121L92,118L91,117L89,116L88,115L86,114L86,112L84,110L83,109L81,108L79,108L77,107L75,106L74,105L72,104L71,105L69,105L67,105L65,105L64,104L63,102L62,101L59,100L57,99L55,98L54,97L53,96L52,94L55,94L55,92L55,90L56,88L58,88L60,87L61,86L61,84L63,83L64,82L65,80L66,77L65,76L64,75L64,73L65,71L64,68L64,67L63,65L64,64L64,61L63,60L64,57L63,56L62,55L61,53L61,50L61,49L62,50L64,48L65,47L65,45L64,43L64,41L66,43L67,45L67,46L68,44L68,42L69,41L72,38L73,36L75,35L77,35L76,33L77,31L77,29L78,27L79,25L81,24L82,23L86,23L86,25L87,23L87,21L90,21L91,21L94,21L98,18L100,17L102,15L104,14L106,12L107,12L109,13L110,15L109,16Z" class="hl"/>
-                                <path d="M115,248L117,248L119,247L120,245L120,243L122,242L123,244L125,246L125,248L126,250L126,252L126,253L128,254L129,256L129,257L128,259L129,260L128,261L128,263L130,265L129,267L131,269L132,272L133,274L133,276L134,278L134,280L134,282L135,283L138,283L141,284L140,286L139,289L138,291L137,292L134,293L131,294L130,296L129,297L130,299L129,301L129,303L130,305L130,307L129,309L129,311L131,313L131,315L129,315L127,316L126,318L125,320L124,322L123,323L121,325L120,327L120,330L119,332L119,334L119,336L119,338L119,340L118,340L117,343L116,344L116,346L114,348L114,349L115,352L117,352L116,354L117,356L118,359L118,361L118,363L120,363L119,365L119,368L120,369L118,370L117,372L117,373L116,375L116,377L115,378L115,380L116,382L116,384L114,385L113,386L111,387L110,389L110,390L110,393L110,395L110,397L111,399L111,401L112,403L111,404L110,405L108,406L108,408L107,410L106,411L106,413L106,415L106,417L105,418L104,420L105,422L105,424L105,426L105,428L105,429L104,431L103,432L103,433L103,435L103,437L104,438L104,440L106,442L106,444L105,445L105,447L109,448L110,449L109,451L107,451L105,451L103,451L105,452L107,452L108,454L107,456L106,457L106,459L106,460L105,461L106,463L106,465L104,466L104,468L103,470L101,472L100,474L101,476L102,477L100,479L99,481L98,482L96,483L95,485L93,486L92,488L93,489L93,491L93,493L94,494L95,496L97,496L99,496L101,496L102,498L101,499L101,501L101,503L103,504L104,505L106,506L108,506L112,506L115,506L119,506L121,507L122,507L124,507L126,508L129,508L126,508L124,508L122,509L120,510L116,511L113,512L112,513L111,516L111,517L111,520L109,521L106,520L103,519L101,517L101,516L103,516L105,516L104,518L106,516L108,515L110,513L108,512L104,514L103,514L100,516L100,517L96,516L97,513L98,512L100,512L103,511L105,511L107,511L105,510L102,510L100,511L99,510L98,512L96,513L94,514L93,513L94,512L95,511L93,511L92,511L90,511L89,509L87,508L90,508L91,507L93,507L95,507L97,506L99,507L99,509L100,507L99,506L100,504L98,503L95,502L98,503L99,504L97,505L95,506L92,506L91,505L90,505L88,504L89,503L90,501L88,500L86,500L84,499L82,498L81,496L83,496L83,494L85,494L86,495L87,497L90,498L91,496L91,495L90,497L88,496L88,495L89,495L87,494L85,493L86,491L89,491L86,489L87,488L89,488L88,486L89,484L88,486L86,486L86,484L86,482L87,479L89,479L87,479L85,478L85,477L86,476L90,476L92,477L92,475L91,473L90,474L88,475L86,475L85,474L85,472L87,473L85,471L87,469L88,468L87,466L85,467L83,466L81,465L79,465L77,466L79,467L77,467L77,465L78,464L80,463L81,462L81,460L83,459L85,459L88,458L88,456L89,456L89,459L89,461L86,462L88,462L89,461L90,459L91,461L90,463L89,465L91,463L91,461L92,459L91,458L91,456L93,455L96,456L95,454L93,454L94,452L96,452L98,450L99,448L96,447L94,446L95,444L96,442L96,440L97,438L98,437L97,435L99,433L98,432L100,431L101,433L100,431L100,429L98,429L99,427L101,427L99,427L98,426L95,428L92,428L91,427L90,426L89,423L89,421L90,418L91,416L91,414L93,413L94,410L93,404L92,402L93,400L92,398L91,396L92,395L92,393L94,393L95,392L95,390L97,388L98,383L99,382L100,380L101,378L102,377L103,373L104,370L104,368L105,367L106,365L106,364L106,361L108,358L108,356L107,351L107,349L106,346L106,343L106,340L108,339L109,337L109,335L108,332L107,329L109,327L110,325L110,323L110,321L112,319L112,317L112,314L113,311L114,309L114,307L113,305L114,303L115,302L114,297L114,294L115,291L115,289L114,287L114,284L116,283L117,280L117,278L117,276L118,273L118,271L117,266L117,262L117,259L117,257L116,255L116,252L116,250L115,248ZM129,511L129,513L129,516L129,518L129,520L129,522L129,524L129,526L128,528L125,528L122,528L121,527L118,528L117,527L115,528L113,527L109,527L108,526L105,526L106,525L108,525L110,525L111,525L113,524L115,525L115,524L113,523L112,521L114,520L115,519L115,521L114,522L116,523L117,524L119,524L120,524L123,525L124,526L126,525L119,522L117,521L119,519L121,518L123,518L121,516L119,516L118,517L116,517L115,515L116,514L116,512L118,512L120,512L122,510L125,511L127,511ZM91,440L89,440L87,440L87,438L87,436L88,434L88,432L88,430L89,429L91,429L92,429L93,431L92,432L91,434L92,435L93,437L91,438L91,440ZM85,484L85,487L85,488L85,490L83,491L82,489L83,487L82,489L79,490L77,489L79,488L78,486L79,485L81,483L82,482L83,481L85,481L85,484ZM78,481L77,480L78,478L77,476L79,476L80,479L80,481L78,481ZM85,480L82,480L81,478L80,477L82,475L83,476L84,478L85,480ZM83,503L83,505L85,506L84,507L83,508L81,506L81,505L82,503ZM91,448L89,449L90,450L90,452L91,454L90,455L88,455L87,453L86,451L84,450L86,448L88,448L88,446L90,446L91,448ZM96,451L95,451L93,450L94,449L95,447L97,448L97,450ZM81,482L80,484L78,485L78,483L79,482ZM85,501L83,502L81,502L80,503L80,501L82,501L84,500ZM81,493L79,493L79,492L81,491L82,492L81,493ZM87,458L85,458L85,456L86,454L87,456L87,458Z" class="hl"/>
-                                <path d="M142,98L144,100L145,101L147,102L149,101L150,100L152,101L154,100L155,99L156,98L158,97L159,96L161,96L162,94L163,92L165,92L167,91L168,89L166,89L164,89L163,87L162,84L161,83L161,81L159,77L158,76L161,76L162,77L165,77L166,77L168,77L169,79L171,80L172,79L172,77L174,76L177,76L179,75L181,74L182,73L184,73L186,71L188,70L188,68L190,67L191,67L193,68L192,70L192,72L193,73L195,74L195,75L196,77L195,79L194,80L194,82L193,84L193,86L193,89L194,91L194,93L196,94L197,96L199,97L201,98L203,98L204,96L205,95L207,96L208,95L210,94L212,93L213,92L215,93L217,93L219,93L221,93L222,93L223,91L221,90L222,88L224,89L227,89L228,88L230,88L231,89L233,90L235,91L237,90L239,89L240,90L242,89L244,90L245,90L247,89L248,87L248,85L249,84L250,82L251,81L252,79L253,78L254,76L255,75L257,75L259,79L259,82L259,84L261,87L261,89L261,91L263,93L264,94L266,94L268,96L267,98L266,100L264,101L263,102L262,104L261,106L259,106L257,108L256,110L255,112L254,113L254,115L252,116L252,118L248,119L250,119L252,120L254,118L257,117L259,115L260,117L261,119L262,120L264,123L265,122L267,122L270,122L272,121L271,122L271,124L270,127L271,125L273,122L274,121L276,119L278,120L278,118L278,116L279,115L281,113L282,113L284,113L286,113L287,113L289,113L292,114L293,115L295,116L297,116L299,118L301,119L303,119L305,120L307,121L307,123L306,124L308,124L307,126L307,128L306,131L308,130L308,128L309,127L309,128L311,128L313,127L315,127L317,126L319,126L321,127L324,129L326,129L328,129L330,130L332,129L334,129L337,129L339,129L341,129L342,130L344,131L348,133L350,135L352,136L354,138L355,140L357,141L358,143L361,144L362,145L363,145L365,146L368,146L369,146L374,147L376,150L377,153L377,155L378,156L378,159L379,161L379,163L379,165L379,167L379,168L378,172L377,176L375,178L373,181L372,182L370,185L369,186L367,188L366,189L363,190L362,192L361,195L359,197L358,200L356,203L354,206L352,207L352,205L350,204L349,205L349,207L348,209L348,211L348,213L348,215L348,220L348,222L348,224L349,227L349,229L348,231L348,234L347,236L347,238L347,240L347,243L346,244L345,245L343,247L343,250L343,255L342,257L341,259L340,260L339,262L338,264L336,267L335,268L334,270L333,272L333,275L332,277L329,278L326,281L326,282L325,283L322,283L320,284L318,283L317,282L317,284L315,284L312,285L314,284L311,283L308,284L306,284L307,286L304,287L302,288L301,289L299,290L297,290L292,292L290,293L288,295L285,297L283,299L282,300L280,302L278,301L277,303L279,304L277,305L277,308L277,310L276,312L277,315L277,317L277,321L277,323L276,324L276,327L274,327L272,329L270,330L269,333L266,336L264,341L262,344L261,346L260,347L258,349L256,350L253,352L252,354L251,351L253,351L256,349L258,348L258,346L260,345L261,344L261,341L262,339L260,340L258,339L257,338L257,339L257,341L257,343L256,344L254,347L252,348L252,350L250,352L251,354L250,355L248,359L247,361L245,364L242,366L241,364L241,362L242,360L244,358L242,357L240,356L239,354L238,353L236,352L234,351L233,349L230,348L228,347L227,346L225,344L224,345L223,346L222,344L221,342L219,341L217,339L215,338L213,339L211,339L212,338L213,336L215,334L217,333L217,331L219,330L221,328L222,327L223,325L225,325L225,323L227,322L229,321L230,320L231,318L233,318L235,318L236,316L238,316L239,314L239,312L239,310L239,308L238,306L238,305L237,304L235,303L233,304L234,301L234,298L235,295L235,294L235,292L234,291L232,290L230,291L228,292L227,291L226,289L226,287L226,286L225,284L225,282L224,281L224,279L222,278L220,278L219,277L218,278L215,278L213,278L211,278L209,277L208,277L208,275L208,273L208,271L209,269L208,268L208,266L207,264L206,263L207,261L207,259L207,258L208,256L208,255L209,253L209,251L210,249L211,247L210,245L209,243L207,242L206,241L204,240L204,237L204,235L205,234L205,232L200,232L197,232L194,232L191,232L191,229L191,226L190,225L189,223L191,223L190,219L190,218L189,216L189,214L188,213L186,211L184,211L182,211L179,211L177,209L175,208L173,207L171,206L169,204L168,205L166,204L165,203L163,203L160,203L159,201L157,200L156,199L155,197L153,196L153,194L153,192L153,190L152,188L153,186L153,184L153,182L151,182L149,182L146,183L145,183L143,184L140,186L138,187L136,188L135,189L133,189L131,191L130,192L128,193L126,192L124,191L123,191L120,191L118,192L116,192L115,191L114,189L114,187L114,184L114,182L114,180L112,181L111,183L109,184L107,184L105,184L103,184L102,182L101,181L99,180L96,179L97,177L96,175L94,174L93,172L92,171L92,169L91,168L90,166L89,164L91,164L90,162L91,160L93,159L95,158L95,156L95,154L96,152L97,150L97,148L98,146L99,146L101,144L103,143L105,142L107,142L109,141L111,141L113,139L115,139L116,140L118,141L119,138L120,135L120,133L121,130L121,128L121,125L122,123L122,121L123,118L123,117L122,115L121,113L121,112L120,110L118,109L118,107L118,104L120,103L121,102L123,102L124,103L125,101L124,99L122,99L120,99L120,97L120,96L120,94L122,94L125,94L128,94L130,94L132,94L132,92L133,94L135,94L136,92L138,91L139,93L140,95L140,97L140,98ZM269,109L271,109L273,109L276,109L278,109L278,111L278,112L277,114L276,116L275,117L275,119L273,118L272,120L270,120L268,121L267,120L264,121L262,120L261,118L261,116L261,114L261,113L261,111L263,109L265,108L269,109ZM269,105L268,107L266,107L264,107L266,106L268,105ZM262,108L260,110L259,108L261,108ZM263,106L262,107L263,105L264,103L264,105ZM253,118L253,117L254,114L255,112L257,112L257,115L256,117L255,118L253,118Z"/>
-                                <path d="M122,242L121,240L122,239L124,237L126,235L126,233L126,232L123,228L124,225L125,224L123,223L123,221L124,219L126,218L127,216L126,215L125,212L126,210L126,207L127,205L128,204L127,201L126,200L126,198L125,197L123,194L122,191L124,191L126,192L128,192L130,192L131,191L133,189L135,189L136,188L138,187L140,186L143,184L145,183L146,183L149,182L150,182L152,182L153,184L153,185L153,187L153,190L153,192L153,194L153,196L154,197L156,199L157,200L158,201L160,203L163,203L165,203L166,204L168,205L169,204L171,206L172,207L174,208L176,208L178,210L181,211L184,211L186,211L187,212L189,213L190,215L189,217L190,219L191,223L188,223L190,225L191,226L191,228L191,231L194,232L197,232L200,232L203,233L205,234L204,235L204,237L204,240L206,241L207,242L209,243L210,245L211,247L210,249L209,251L209,253L208,255L208,256L207,258L207,259L208,261L207,262L206,260L204,258L202,257L199,255L196,255L193,255L189,256L186,257L181,258L180,258L178,261L177,263L176,265L176,267L176,269L175,272L174,274L174,276L173,278L172,276L168,276L165,276L164,276L162,279L161,281L161,282L160,281L159,279L158,277L156,277L152,277L150,277L148,275L146,276L144,277L143,278L141,280L140,282L138,283L136,283L135,283L134,281L134,279L133,277L133,275L132,273L132,271L130,268L129,267L128,265L128,262L129,261L128,259L129,257L129,256L128,254L126,253L126,252L126,250L125,248L125,246L124,245L122,242Z"/>
-                                <path d="M210,339L210,340L208,342L209,344L208,346L208,347L207,349L207,351L206,352L206,354L206,356L206,360L205,361L204,363L203,366L204,367L205,370L204,372L205,373L209,375L211,376L213,377L214,379L212,381L212,384L214,386L217,386L217,389L217,391L214,395L212,397L211,399L206,402L200,404L195,405L186,406L182,406L181,406L179,406L177,406L175,405L175,408L177,409L177,411L177,413L175,414L175,416L175,418L176,419L175,421L172,422L169,423L166,423L162,422L160,421L158,421L157,420L155,420L154,423L155,426L155,429L156,431L158,431L160,433L162,432L161,431L164,430L166,432L166,434L165,436L163,436L161,435L159,433L157,434L155,435L158,436L160,437L158,438L156,439L154,441L153,443L154,445L154,447L153,448L151,450L151,451L147,452L144,453L142,454L139,457L138,458L137,460L136,462L138,464L142,468L148,469L150,470L150,472L148,474L150,475L148,476L145,478L144,479L140,480L139,482L137,483L136,485L135,490L132,492L130,491L129,490L127,491L129,491L130,492L128,493L126,494L125,495L125,497L123,499L125,499L125,501L125,503L123,503L126,503L128,506L130,508L128,508L124,507L122,507L121,507L119,506L115,506L112,506L108,506L106,506L104,506L103,504L101,503L101,501L101,499L102,498L101,496L99,496L97,496L96,497L94,495L93,493L93,491L93,489L92,488L93,486L95,485L96,483L98,482L99,481L99,479L101,478L101,476L100,475L101,473L102,471L103,470L104,468L105,466L106,465L105,463L105,461L106,460L105,458L107,456L109,455L107,453L105,452L103,452L105,451L107,451L109,451L110,449L109,448L105,448L105,446L106,444L106,443L104,440L106,439L103,438L103,435L103,433L103,432L104,430L105,430L105,428L105,426L105,424L105,422L104,420L105,418L106,417L105,415L106,414L106,412L107,411L108,409L108,406L110,405L111,404L112,403L111,401L111,399L110,397L110,395L110,393L110,390L110,389L111,387L113,386L114,385L116,384L116,382L115,380L115,378L116,377L116,375L117,373L117,372L118,370L120,369L119,368L119,365L120,363L118,363L118,361L118,359L117,356L116,355L116,353L115,352L114,349L114,348L115,346L116,344L117,343L117,341L119,340L120,339L119,336L119,334L118,332L119,331L120,328L121,326L122,324L123,323L125,322L126,319L127,316L128,315L130,315L131,313L129,311L129,309L130,307L130,305L129,303L129,301L130,300L129,298L130,296L131,295L133,294L137,292L138,292L139,289L140,286L141,284L139,282L140,281L142,279L143,278L145,277L146,275L149,276L152,277L155,277L157,277L158,278L159,280L160,282L161,280L163,277L165,276L168,276L172,276L173,278L175,279L176,281L177,283L178,284L180,286L181,287L184,288L185,290L186,290L189,291L191,292L193,292L195,293L197,295L199,296L202,297L204,298L206,299L209,300L210,302L211,303L209,304L208,306L207,308L206,310L206,311L205,313L204,314L203,316L206,317L209,317L212,318L214,318L216,318L218,318L219,319L220,317L223,317L224,318L225,316L226,314L228,314L230,313L231,312L232,309L232,307L232,303L234,304L236,303L237,304L238,306L239,308L239,310L239,312L239,314L238,315L237,316L235,317L233,318L232,319L230,320L229,321L227,322L225,323L225,324L223,325L222,327L221,328L219,330L218,331L217,333L215,334L213,336L212,338L210,339Z"/>
-                            </g>
-                            <path class="jmap-route" id="jmap-r1" pathLength="1" d="M83.1,23.7 Q10,200 113.6,363.9"/>
-                            <path class="jmap-route" id="jmap-r2" pathLength="1" d="M113.6,363.9 Q215,230 88.4,71.2"/>
-                            <line class="jmap-leader" x1="86.1" y1="23.7" x2="214" y2="58"/>
-                            <g class="jmap-inset" transform="translate(262 62)">
-                                <circle r="48" class="jmap-inset-bg"/>
-                                <path class="jmap-commute" d="M-20,-16 Q8,-14 18,14"/>
-                                <circle class="jmap-city" data-stop="1" cx="-20" cy="-16" r="5"/>
-                                <circle class="jmap-city" data-stop="0" cx="18" cy="14" r="5"/>
-                                <text x="-20" y="-25" text-anchor="middle">Barranquilla</text>
-                                <text x="18" y="31" text-anchor="middle">Malambo</text>
-                                <text class="jmap-hours" x="6" y="-2" text-anchor="middle">2 h</text>
-                            </g>
-                            <circle class="jmap-city" data-stop="1" cx="83.1" cy="23.7" r="4.5"/>
-                            <circle class="jmap-city" data-stop="2" cx="113.6" cy="363.9" r="5"/>
-                            <circle class="jmap-city" data-stop="3" cx="88.4" cy="71.2" r="5"/>
-                            <text class="jmap-label" x="123.6" y="367.9">Santiago</text>
-                            <text class="jmap-label" x="98.4" y="75.2">Bogotá</text>
-                        </svg>
+                        <svg class="jmap-svg" id="jmap-svg" viewBox="0 0 400 470" role="img" aria-label="Mapa del recorrido: Malambo, Barranquilla, Santiago de Chile y Bogotá">
+                                <defs>
+                                    <radialGradient id="jmap-ocean" cx="0.3" cy="0.25" r="0.9"><stop offset="0" stop-color="var(--accent)" stop-opacity="0.16"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient>
+                                    <linearGradient id="jmap-fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0.8" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+                                    <mask id="jmap-mask"><rect width="400" height="470" fill="url(#jmap-fade)"/></mask>
+                                    <filter id="jmap-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+                                </defs>
+                                <path class="jmap-grat" d="M44,0V470M119,0V470M193,0V470M267,0V470M341,0V470M0,31H400M0,107H400M0,184H400M0,261H400M0,337H400M0,414H400"/>
+                                <g class="jmap-land" mask="url(#jmap-mask)">
+                                    <path data-country="Venezuela" d="M164,22L164,24L162,23L160,23L161,22L164,22ZM192,42L194,44L193,45L191,46L190,47L188,48L187,50L188,51L190,52L190,54L188,55L186,56L184,56L184,58L184,60L183,61L184,64L186,66L187,67L188,69L187,71L185,72L184,73L182,74L179,75L177,76L175,75L173,76L172,79L171,80L169,79L168,77L166,77L165,77L163,77L162,76L159,76L158,75L158,77L161,79L161,82L162,84L163,86L163,88L165,89L167,89L167,91L165,92L163,92L162,94L161,96L160,96L158,97L156,98L155,99L154,100L152,102L151,100L150,100L148,101L146,102L144,100L142,98L141,96L141,94L140,92L140,91L139,89L138,88L137,87L135,86L137,83L138,82L137,79L136,78L135,76L135,74L134,72L135,70L135,67L136,66L136,64L137,62L137,60L135,59L134,59L130,60L128,60L125,60L124,60L122,59L120,58L119,56L118,54L116,54L114,53L111,54L108,53L105,54L103,53L102,51L100,50L100,48L101,46L101,44L100,42L98,40L98,38L96,37L94,37L95,35L96,33L97,30L97,27L98,25L99,23L102,22L104,18L106,17L108,17L105,18L104,20L105,22L106,23L107,25L106,27L105,29L103,32L104,33L105,35L106,37L107,38L109,37L110,36L111,33L110,31L108,29L108,27L107,25L109,23L112,21L114,21L117,20L118,19L120,19L119,18L117,18L116,16L117,15L119,14L120,17L121,19L124,19L127,20L129,21L130,22L131,23L131,25L132,27L134,27L136,27L140,26L146,26L147,27L149,29L152,29L155,30L157,30L162,27L164,27L162,26L164,26L167,26L169,25L171,25L173,25L176,25L179,25L176,26L173,26L171,27L173,28L173,30L175,31L176,32L178,32L180,33L181,31L183,33L185,34L187,36L185,37L184,39L184,40L181,41L183,43L185,42L187,41L189,42L191,41Z"/>
+                                    <path data-country="Uruguay" d="M242,366L240,368L239,370L237,372L236,373L230,375L228,375L225,374L221,375L219,375L216,373L214,372L211,372L209,372L208,370L206,369L204,367L204,364L205,362L206,361L206,359L206,356L207,355L206,353L207,351L207,349L208,347L208,346L209,344L208,342L210,340L210,339L212,340L214,339L216,338L219,341L221,342L222,344L222,346L224,345L225,344L227,345L228,347L229,347L233,349L234,351L236,352L238,353L239,354L240,356L242,357L243,358L242,360L241,361L241,364L241,366Z"/>
+                                    <path data-country="Suriname" d="M236,66L235,68L234,69L234,71L234,73L234,75L235,77L236,79L237,81L236,83L236,85L234,88L233,89L231,89L230,87L227,88L225,89L223,88L222,89L223,91L223,93L221,93L219,93L217,92L216,90L215,89L214,87L213,85L213,84L213,82L211,82L209,80L208,78L207,77L207,75L208,73L209,72L208,70L210,69L212,69L213,68L213,66L214,64L214,62L219,62L220,62L223,63L225,61L227,62L229,61L231,61L234,62L236,62L237,64L236,66Z"/>
+                                    <path data-country="Peru" d="M119,140L117,140L116,139L114,139L112,140L110,141L108,141L106,142L104,142L102,144L100,145L99,146L97,147L97,150L96,152L95,154L95,155L95,157L93,159L91,160L90,162L91,163L89,164L89,166L90,167L91,169L92,170L93,172L94,173L95,174L96,176L96,178L98,180L100,180L102,181L102,183L105,184L107,184L109,184L110,183L112,182L114,180L114,182L114,184L114,185L114,189L114,190L115,192L117,192L119,191L121,191L123,193L124,196L126,198L126,200L127,201L128,203L127,205L126,206L126,210L126,212L126,215L127,216L126,218L125,219L124,220L123,222L125,224L124,225L123,227L124,231L127,232L126,234L125,236L123,238L121,239L122,241L121,243L120,245L119,247L117,248L115,248L112,246L111,244L109,243L108,241L105,239L104,238L102,237L100,235L98,235L94,233L91,232L88,229L86,229L85,228L81,226L79,224L78,222L76,221L75,220L73,217L72,216L71,214L73,211L71,208L70,206L68,203L67,201L66,200L65,197L62,194L62,192L59,186L57,183L56,179L55,178L54,174L52,172L52,170L51,169L49,167L47,164L46,162L45,160L44,158L38,156L37,154L36,153L38,152L38,151L36,147L36,145L35,143L35,141L38,137L40,135L42,133L43,135L43,137L42,138L41,140L41,141L43,141L45,141L47,142L48,143L49,145L51,146L52,144L54,143L54,141L55,139L55,138L56,136L57,134L58,133L60,131L62,130L64,129L68,128L70,126L72,125L75,122L76,121L77,119L78,117L78,116L80,115L79,113L78,110L77,109L79,108L80,108L82,109L83,110L85,111L86,113L87,114L88,115L90,117L92,117L93,119L94,121L95,123L95,125L97,126L98,126L100,126L102,126L104,125L105,124L107,124L109,125L111,124L113,125L115,126L116,127L118,128L117,129L116,131L115,133L114,135L113,136L115,137L116,137L117,138L119,140Z"/>
+                                    <path data-country="Paraguay" d="M206,262L207,264L207,265L208,267L209,269L208,271L208,273L208,275L208,277L209,277L211,278L213,278L215,278L217,278L218,277L220,278L222,278L223,278L224,280L225,282L225,283L226,286L226,287L226,289L227,291L228,292L230,291L232,290L234,291L235,292L235,294L235,295L234,298L234,300L233,302L232,307L232,309L231,311L230,312L229,314L227,314L225,316L225,317L223,317L222,317L220,318L218,318L216,318L214,318L212,318L209,317L206,317L203,317L203,315L205,314L206,312L206,310L207,308L208,307L209,305L210,304L210,302L209,300L206,299L205,299L202,297L199,296L197,295L195,293L193,292L192,291L189,291L186,290L185,290L184,288L182,287L181,286L179,285L177,283L176,281L175,279L173,278L174,276L174,274L175,272L176,269L176,267L176,265L177,263L178,261L179,259L181,258L184,257L189,256L193,255L196,255L199,255L202,257L204,258L206,259L206,262Z"/>
+                                    <path data-country="Panama" d="M64,41L64,43L65,45L65,46L64,48L63,49L61,48L61,50L60,52L58,50L56,47L57,45L58,43L60,44L61,45L59,44L58,43L56,43L55,41L53,40L51,38L49,38L47,39L46,41L44,43L42,44L41,45L43,47L44,49L44,50L42,50L41,52L39,52L38,52L37,48L35,49L33,48L32,46L31,45L29,44L27,44L25,44L23,45L22,44L23,42L23,40L24,39L23,38L23,35L24,34L26,34L27,36L28,37L29,39L30,39L33,40L36,40L38,39L40,38L43,37L45,36L46,35L49,34L51,34L54,35L59,37L61,38L61,39L64,41Z"/>
+                                    <path data-country="Nicaragua" d="M21,-8L20,-6L21,-3L20,0L19,2L18,5L18,8L18,11L17,11L17,13L17,15L16,16L17,17L16,19L16,21L17,23L17,25L14,25L12,23L10,23L8,23L6,23L3,22L2,23L0,20L-3,17L-5,15L-6,13L-8,12L-11,10L-12,8L-11,8L-8,8L-7,6L-5,5L-6,3L-3,2L-1,0L2,1L3,0L5,-2L6,-3L7,-4L8,-6L9,-5L11,-5L13,-6L15,-6L17,-7L18,-7L21,-8Z"/>
+                                    <path data-country="Guyana" d="M187,67L186,66L184,64L182,62L184,60L184,58L184,57L185,56L187,55L190,54L190,53L188,52L188,51L188,49L189,47L191,47L192,46L194,44L192,42L194,43L196,44L199,45L201,48L203,49L204,51L204,53L203,55L203,58L204,56L205,55L207,55L209,57L210,58L212,59L213,61L214,62L213,65L212,66L213,68L211,69L209,70L208,71L208,73L207,75L207,77L208,78L209,80L210,82L213,81L213,83L213,85L214,86L215,88L216,90L217,91L218,92L217,93L215,93L213,92L211,94L209,94L207,95L206,95L204,96L203,98L201,98L199,97L198,96L196,95L195,94L194,92L194,90L193,88L193,84L194,82L194,80L195,79L196,77L195,75L195,74L193,73L191,73L192,71L193,69L192,68L190,67L188,68Z"/>
+                                    <path data-country="Ecuador" d="M79,108L77,108L78,110L79,111L80,115L78,116L78,117L77,119L76,121L75,122L73,124L71,125L69,127L65,128L63,129L60,130L59,132L58,133L56,135L56,137L55,138L54,140L54,142L53,143L52,145L50,145L49,144L48,142L46,142L44,141L42,141L42,140L41,138L42,138L43,136L43,134L43,133L45,132L46,129L46,127L46,125L46,124L45,126L43,127L42,128L39,126L38,125L39,123L39,121L39,118L38,116L40,114L41,113L42,112L41,111L42,109L43,107L44,104L44,101L46,100L48,99L50,99L53,98L53,96L54,98L57,99L59,100L61,101L62,102L64,104L65,105L67,105L69,105L71,105L72,104L74,105L75,106L77,107L79,108ZM43,130L43,128L44,128L43,130Z"/>
+                                    <path data-country="Costa Rica" d="M25,34L24,34L23,36L24,38L23,40L23,42L22,43L23,45L22,44L21,42L20,41L20,43L18,43L17,41L18,40L17,38L16,36L14,35L11,34L10,33L7,30L6,29L6,31L8,32L7,33L5,32L3,31L1,30L1,28L2,26L1,24L2,23L3,22L5,22L8,23L10,23L11,23L13,24L15,25L17,24L19,27L21,30L23,32L25,34Z"/>
+                                    <path data-country="Colombia" d="M109,16L107,17L104,18L102,22L100,23L99,24L97,27L97,29L96,32L95,34L94,36L96,36L97,37L98,40L99,41L101,43L101,45L100,47L100,50L101,51L103,53L105,54L107,53L109,54L113,53L115,53L117,54L119,56L120,58L122,59L123,60L124,60L126,60L130,60L132,60L134,59L137,59L137,61L136,63L136,65L135,66L135,68L134,72L135,73L135,75L136,78L137,79L138,81L137,83L135,85L136,86L138,88L139,89L140,91L140,92L141,94L141,96L142,98L140,98L140,95L139,93L138,92L137,91L135,93L134,94L133,93L132,94L128,94L127,94L124,94L122,94L120,94L120,97L120,99L121,99L123,99L124,100L125,102L123,102L121,102L120,103L118,104L118,106L118,108L119,110L120,111L122,112L122,114L123,116L123,118L122,121L122,123L121,125L121,128L121,130L120,133L120,135L119,138L119,140L117,138L116,137L115,137L113,136L114,135L115,133L116,131L117,129L118,128L116,127L115,126L113,125L112,124L110,125L108,125L106,124L104,125L103,126L101,126L99,125L97,126L95,125L95,123L95,121L93,121L92,118L91,117L89,116L88,115L86,114L86,112L84,110L83,109L81,108L79,108L77,107L75,106L74,105L72,104L71,105L69,105L67,105L65,105L64,104L63,102L62,101L59,100L57,99L55,98L54,97L53,96L52,94L55,94L55,92L55,90L56,88L58,88L60,87L61,86L61,84L63,83L64,82L65,80L66,77L65,76L64,75L64,73L65,71L64,68L64,67L63,65L64,64L64,61L63,60L64,57L63,56L62,55L61,53L61,50L61,49L62,50L64,48L65,47L65,45L64,43L64,41L66,43L67,45L67,46L68,44L68,42L69,41L72,38L73,36L75,35L77,35L76,33L77,31L77,29L78,27L79,25L81,24L82,23L86,23L86,25L87,23L87,21L90,21L91,21L94,21L98,18L100,17L102,15L104,14L106,12L107,12L109,13L110,15L109,16Z"/>
+                                    <path data-country="Chile" d="M115,248L117,248L119,247L120,245L120,243L122,242L123,244L125,246L125,248L126,250L126,252L126,253L128,254L129,256L129,257L128,259L129,260L128,261L128,263L130,265L129,267L131,269L132,272L133,274L133,276L134,278L134,280L134,282L135,283L138,283L141,284L140,286L139,289L138,291L137,292L134,293L131,294L130,296L129,297L130,299L129,301L129,303L130,305L130,307L129,309L129,311L131,313L131,315L129,315L127,316L126,318L125,320L124,322L123,323L121,325L120,327L120,330L119,332L119,334L119,336L119,338L119,340L118,340L117,343L116,344L116,346L114,348L114,349L115,352L117,352L116,354L117,356L118,359L118,361L118,363L120,363L119,365L119,368L120,369L118,370L117,372L117,373L116,375L116,377L115,378L115,380L116,382L116,384L114,385L113,386L111,387L110,389L110,390L110,393L110,395L110,397L111,399L111,401L112,403L111,404L110,405L108,406L108,408L107,410L106,411L106,413L106,415L106,417L105,418L104,420L105,422L105,424L105,426L105,428L105,429L104,431L103,432L103,433L103,435L103,437L104,438L104,440L106,442L106,444L105,445L105,447L109,448L110,449L109,451L107,451L105,451L103,451L105,452L107,452L108,454L107,456L106,457L106,459L106,460L105,461L106,463L106,465L104,466L104,468L103,470L101,472L100,474L101,476L102,477L100,479L99,481L98,482L96,483L95,485L93,486L92,488L93,489L93,491L93,493L94,494L95,496L97,496L99,496L101,496L102,498L101,499L101,501L101,503L103,504L104,505L106,506L108,506L112,506L115,506L119,506L121,507L122,507L124,507L126,508L129,508L126,508L124,508L122,509L120,510L116,511L113,512L112,513L111,516L111,517L111,520L109,521L106,520L103,519L101,517L101,516L103,516L105,516L104,518L106,516L108,515L110,513L108,512L104,514L103,514L100,516L100,517L96,516L97,513L98,512L100,512L103,511L105,511L107,511L105,510L102,510L100,511L99,510L98,512L96,513L94,514L93,513L94,512L95,511L93,511L92,511L90,511L89,509L87,508L90,508L91,507L93,507L95,507L97,506L99,507L99,509L100,507L99,506L100,504L98,503L95,502L98,503L99,504L97,505L95,506L92,506L91,505L90,505L88,504L89,503L90,501L88,500L86,500L84,499L82,498L81,496L83,496L83,494L85,494L86,495L87,497L90,498L91,496L91,495L90,497L88,496L88,495L89,495L87,494L85,493L86,491L89,491L86,489L87,488L89,488L88,486L89,484L88,486L86,486L86,484L86,482L87,479L89,479L87,479L85,478L85,477L86,476L90,476L92,477L92,475L91,473L90,474L88,475L86,475L85,474L85,472L87,473L85,471L87,469L88,468L87,466L85,467L83,466L81,465L79,465L77,466L79,467L77,467L77,465L78,464L80,463L81,462L81,460L83,459L85,459L88,458L88,456L89,456L89,459L89,461L86,462L88,462L89,461L90,459L91,461L90,463L89,465L91,463L91,461L92,459L91,458L91,456L93,455L96,456L95,454L93,454L94,452L96,452L98,450L99,448L96,447L94,446L95,444L96,442L96,440L97,438L98,437L97,435L99,433L98,432L100,431L101,433L100,431L100,429L98,429L99,427L101,427L99,427L98,426L95,428L92,428L91,427L90,426L89,423L89,421L90,418L91,416L91,414L93,413L94,410L93,404L92,402L93,400L92,398L91,396L92,395L92,393L94,393L95,392L95,390L97,388L98,383L99,382L100,380L101,378L102,377L103,373L104,370L104,368L105,367L106,365L106,364L106,361L108,358L108,356L107,351L107,349L106,346L106,343L106,340L108,339L109,337L109,335L108,332L107,329L109,327L110,325L110,323L110,321L112,319L112,317L112,314L113,311L114,309L114,307L113,305L114,303L115,302L114,297L114,294L115,291L115,289L114,287L114,284L116,283L117,280L117,278L117,276L118,273L118,271L117,266L117,262L117,259L117,257L116,255L116,252L116,250L115,248ZM129,511L129,513L129,516L129,518L129,520L129,522L129,524L129,526L128,528L125,528L122,528L121,527L118,528L117,527L115,528L113,527L109,527L108,526L105,526L106,525L108,525L110,525L111,525L113,524L115,525L115,524L113,523L112,521L114,520L115,519L115,521L114,522L116,523L117,524L119,524L120,524L123,525L124,526L126,525L119,522L117,521L119,519L121,518L123,518L121,516L119,516L118,517L116,517L115,515L116,514L116,512L118,512L120,512L122,510L125,511L127,511ZM91,440L89,440L87,440L87,438L87,436L88,434L88,432L88,430L89,429L91,429L92,429L93,431L92,432L91,434L92,435L93,437L91,438L91,440ZM85,484L85,487L85,488L85,490L83,491L82,489L83,487L82,489L79,490L77,489L79,488L78,486L79,485L81,483L82,482L83,481L85,481L85,484ZM78,481L77,480L78,478L77,476L79,476L80,479L80,481L78,481ZM85,480L82,480L81,478L80,477L82,475L83,476L84,478L85,480ZM83,503L83,505L85,506L84,507L83,508L81,506L81,505L82,503ZM91,448L89,449L90,450L90,452L91,454L90,455L88,455L87,453L86,451L84,450L86,448L88,448L88,446L90,446L91,448ZM96,451L95,451L93,450L94,449L95,447L97,448L97,450ZM81,482L80,484L78,485L78,483L79,482ZM85,501L83,502L81,502L80,503L80,501L82,501L84,500ZM81,493L79,493L79,492L81,491L82,492L81,493ZM87,458L85,458L85,456L86,454L87,456L87,458Z"/>
+                                    <path data-country="Brazil" d="M142,98L144,100L145,101L147,102L149,101L150,100L152,101L154,100L155,99L156,98L158,97L159,96L161,96L162,94L163,92L165,92L167,91L168,89L166,89L164,89L163,87L162,84L161,83L161,81L159,77L158,76L161,76L162,77L165,77L166,77L168,77L169,79L171,80L172,79L172,77L174,76L177,76L179,75L181,74L182,73L184,73L186,71L188,70L188,68L190,67L191,67L193,68L192,70L192,72L193,73L195,74L195,75L196,77L195,79L194,80L194,82L193,84L193,86L193,89L194,91L194,93L196,94L197,96L199,97L201,98L203,98L204,96L205,95L207,96L208,95L210,94L212,93L213,92L215,93L217,93L219,93L221,93L222,93L223,91L221,90L222,88L224,89L227,89L228,88L230,88L231,89L233,90L235,91L237,90L239,89L240,90L242,89L244,90L245,90L247,89L248,87L248,85L249,84L250,82L251,81L252,79L253,78L254,76L255,75L257,75L259,79L259,82L259,84L261,87L261,89L261,91L263,93L264,94L266,94L268,96L267,98L266,100L264,101L263,102L262,104L261,106L259,106L257,108L256,110L255,112L254,113L254,115L252,116L252,118L248,119L250,119L252,120L254,118L257,117L259,115L260,117L261,119L262,120L264,123L265,122L267,122L270,122L272,121L271,122L271,124L270,127L271,125L273,122L274,121L276,119L278,120L278,118L278,116L279,115L281,113L282,113L284,113L286,113L287,113L289,113L292,114L293,115L295,116L297,116L299,118L301,119L303,119L305,120L307,121L307,123L306,124L308,124L307,126L307,128L306,131L308,130L308,128L309,127L309,128L311,128L313,127L315,127L317,126L319,126L321,127L324,129L326,129L328,129L330,130L332,129L334,129L337,129L339,129L341,129L342,130L344,131L348,133L350,135L352,136L354,138L355,140L357,141L358,143L361,144L362,145L363,145L365,146L368,146L369,146L374,147L376,150L377,153L377,155L378,156L378,159L379,161L379,163L379,165L379,167L379,168L378,172L377,176L375,178L373,181L372,182L370,185L369,186L367,188L366,189L363,190L362,192L361,195L359,197L358,200L356,203L354,206L352,207L352,205L350,204L349,205L349,207L348,209L348,211L348,213L348,215L348,220L348,222L348,224L349,227L349,229L348,231L348,234L347,236L347,238L347,240L347,243L346,244L345,245L343,247L343,250L343,255L342,257L341,259L340,260L339,262L338,264L336,267L335,268L334,270L333,272L333,275L332,277L329,278L326,281L326,282L325,283L322,283L320,284L318,283L317,282L317,284L315,284L312,285L314,284L311,283L308,284L306,284L307,286L304,287L302,288L301,289L299,290L297,290L292,292L290,293L288,295L285,297L283,299L282,300L280,302L278,301L277,303L279,304L277,305L277,308L277,310L276,312L277,315L277,317L277,321L277,323L276,324L276,327L274,327L272,329L270,330L269,333L266,336L264,341L262,344L261,346L260,347L258,349L256,350L253,352L252,354L251,351L253,351L256,349L258,348L258,346L260,345L261,344L261,341L262,339L260,340L258,339L257,338L257,339L257,341L257,343L256,344L254,347L252,348L252,350L250,352L251,354L250,355L248,359L247,361L245,364L242,366L241,364L241,362L242,360L244,358L242,357L240,356L239,354L238,353L236,352L234,351L233,349L230,348L228,347L227,346L225,344L224,345L223,346L222,344L221,342L219,341L217,339L215,338L213,339L211,339L212,338L213,336L215,334L217,333L217,331L219,330L221,328L222,327L223,325L225,325L225,323L227,322L229,321L230,320L231,318L233,318L235,318L236,316L238,316L239,314L239,312L239,310L239,308L238,306L238,305L237,304L235,303L233,304L234,301L234,298L235,295L235,294L235,292L234,291L232,290L230,291L228,292L227,291L226,289L226,287L226,286L225,284L225,282L224,281L224,279L222,278L220,278L219,277L218,278L215,278L213,278L211,278L209,277L208,277L208,275L208,273L208,271L209,269L208,268L208,266L207,264L206,263L207,261L207,259L207,258L208,256L208,255L209,253L209,251L210,249L211,247L210,245L209,243L207,242L206,241L204,240L204,237L204,235L205,234L205,232L200,232L197,232L194,232L191,232L191,229L191,226L190,225L189,223L191,223L190,219L190,218L189,216L189,214L188,213L186,211L184,211L182,211L179,211L177,209L175,208L173,207L171,206L169,204L168,205L166,204L165,203L163,203L160,203L159,201L157,200L156,199L155,197L153,196L153,194L153,192L153,190L152,188L153,186L153,184L153,182L151,182L149,182L146,183L145,183L143,184L140,186L138,187L136,188L135,189L133,189L131,191L130,192L128,193L126,192L124,191L123,191L120,191L118,192L116,192L115,191L114,189L114,187L114,184L114,182L114,180L112,181L111,183L109,184L107,184L105,184L103,184L102,182L101,181L99,180L96,179L97,177L96,175L94,174L93,172L92,171L92,169L91,168L90,166L89,164L91,164L90,162L91,160L93,159L95,158L95,156L95,154L96,152L97,150L97,148L98,146L99,146L101,144L103,143L105,142L107,142L109,141L111,141L113,139L115,139L116,140L118,141L119,138L120,135L120,133L121,130L121,128L121,125L122,123L122,121L123,118L123,117L122,115L121,113L121,112L120,110L118,109L118,107L118,104L120,103L121,102L123,102L124,103L125,101L124,99L122,99L120,99L120,97L120,96L120,94L122,94L125,94L128,94L130,94L132,94L132,92L133,94L135,94L136,92L138,91L139,93L140,95L140,97L140,98ZM269,109L271,109L273,109L276,109L278,109L278,111L278,112L277,114L276,116L275,117L275,119L273,118L272,120L270,120L268,121L267,120L264,121L262,120L261,118L261,116L261,114L261,113L261,111L263,109L265,108L269,109ZM269,105L268,107L266,107L264,107L266,106L268,105ZM262,108L260,110L259,108L261,108ZM263,106L262,107L263,105L264,103L264,105ZM253,118L253,117L254,114L255,112L257,112L257,115L256,117L255,118L253,118Z"/>
+                                    <path data-country="Bolivia" d="M122,242L121,240L122,239L124,237L126,235L126,233L126,232L123,228L124,225L125,224L123,223L123,221L124,219L126,218L127,216L126,215L125,212L126,210L126,207L127,205L128,204L127,201L126,200L126,198L125,197L123,194L122,191L124,191L126,192L128,192L130,192L131,191L133,189L135,189L136,188L138,187L140,186L143,184L145,183L146,183L149,182L150,182L152,182L153,184L153,185L153,187L153,190L153,192L153,194L153,196L154,197L156,199L157,200L158,201L160,203L163,203L165,203L166,204L168,205L169,204L171,206L172,207L174,208L176,208L178,210L181,211L184,211L186,211L187,212L189,213L190,215L189,217L190,219L191,223L188,223L190,225L191,226L191,228L191,231L194,232L197,232L200,232L203,233L205,234L204,235L204,237L204,240L206,241L207,242L209,243L210,245L211,247L210,249L209,251L209,253L208,255L208,256L207,258L207,259L208,261L207,262L206,260L204,258L202,257L199,255L196,255L193,255L189,256L186,257L181,258L180,258L178,261L177,263L176,265L176,267L176,269L175,272L174,274L174,276L173,278L172,276L168,276L165,276L164,276L162,279L161,281L161,282L160,281L159,279L158,277L156,277L152,277L150,277L148,275L146,276L144,277L143,278L141,280L140,282L138,283L136,283L135,283L134,281L134,279L133,277L133,275L132,273L132,271L130,268L129,267L128,265L128,262L129,261L128,259L129,257L129,256L128,254L126,253L126,252L126,250L125,248L125,246L124,245L122,242Z"/>
+                                    <path data-country="Argentina" d="M210,339L210,340L208,342L209,344L208,346L208,347L207,349L207,351L206,352L206,354L206,356L206,360L205,361L204,363L203,366L204,367L205,370L204,372L205,373L209,375L211,376L213,377L214,379L212,381L212,384L214,386L217,386L217,389L217,391L214,395L212,397L211,399L206,402L200,404L195,405L186,406L182,406L181,406L179,406L177,406L175,405L175,408L177,409L177,411L177,413L175,414L175,416L175,418L176,419L175,421L172,422L169,423L166,423L162,422L160,421L158,421L157,420L155,420L154,423L155,426L155,429L156,431L158,431L160,433L162,432L161,431L164,430L166,432L166,434L165,436L163,436L161,435L159,433L157,434L155,435L158,436L160,437L158,438L156,439L154,441L153,443L154,445L154,447L153,448L151,450L151,451L147,452L144,453L142,454L139,457L138,458L137,460L136,462L138,464L142,468L148,469L150,470L150,472L148,474L150,475L148,476L145,478L144,479L140,480L139,482L137,483L136,485L135,490L132,492L130,491L129,490L127,491L129,491L130,492L128,493L126,494L125,495L125,497L123,499L125,499L125,501L125,503L123,503L126,503L128,506L130,508L128,508L124,507L122,507L121,507L119,506L115,506L112,506L108,506L106,506L104,506L103,504L101,503L101,501L101,499L102,498L101,496L99,496L97,496L96,497L94,495L93,493L93,491L93,489L92,488L93,486L95,485L96,483L98,482L99,481L99,479L101,478L101,476L100,475L101,473L102,471L103,470L104,468L105,466L106,465L105,463L105,461L106,460L105,458L107,456L109,455L107,453L105,452L103,452L105,451L107,451L109,451L110,449L109,448L105,448L105,446L106,444L106,443L104,440L106,439L103,438L103,435L103,433L103,432L104,430L105,430L105,428L105,426L105,424L105,422L104,420L105,418L106,417L105,415L106,414L106,412L107,411L108,409L108,406L110,405L111,404L112,403L111,401L111,399L110,397L110,395L110,393L110,390L110,389L111,387L113,386L114,385L116,384L116,382L115,380L115,378L116,377L116,375L117,373L117,372L118,370L120,369L119,368L119,365L120,363L118,363L118,361L118,359L117,356L116,355L116,353L115,352L114,349L114,348L115,346L116,344L117,343L117,341L119,340L120,339L119,336L119,334L118,332L119,331L120,328L121,326L122,324L123,323L125,322L126,319L127,316L128,315L130,315L131,313L129,311L129,309L130,307L130,305L129,303L129,301L130,300L129,298L130,296L131,295L133,294L137,292L138,292L139,289L140,286L141,284L139,282L140,281L142,279L143,278L145,277L146,275L149,276L152,277L155,277L157,277L158,278L159,280L160,282L161,280L163,277L165,276L168,276L172,276L173,278L175,279L176,281L177,283L178,284L180,286L181,287L184,288L185,290L186,290L189,291L191,292L193,292L195,293L197,295L199,296L202,297L204,298L206,299L209,300L210,302L211,303L209,304L208,306L207,308L206,310L206,311L205,313L204,314L203,316L206,317L209,317L212,318L214,318L216,318L218,318L219,319L220,317L223,317L224,318L225,316L226,314L228,314L230,313L231,312L232,309L232,307L232,303L234,304L236,303L237,304L238,306L239,308L239,310L239,312L239,314L238,315L237,316L235,317L233,318L232,319L230,320L229,321L227,322L225,323L225,324L223,325L222,327L221,328L219,330L218,331L217,333L215,334L213,336L212,338L210,339Z"/>
+                                </g>
+                                <path class="jmap-route-glow" id="jmap-g1" pathLength="1" d="M83.1,23.7 Q10,200 113.6,363.9"/>
+                                <path class="jmap-route-glow" id="jmap-g2" pathLength="1" d="M113.6,363.9 Q215,230 88.4,71.2"/>
+                                <path class="jmap-route" id="jmap-r1" pathLength="1" d="M83.1,23.7 Q10,200 113.6,363.9"/>
+                                <path class="jmap-route" id="jmap-r2" pathLength="1" d="M113.6,363.9 Q215,230 88.4,71.2"/>
+                                <line class="jmap-leader" x1="87.1" y1="23.7" x2="207" y2="56"/>
+                                <g class="jmap-inset" transform="translate(262 62)">
+                                    <circle r="54" class="jmap-inset-bg"/>
+                                    <text class="jmap-inset-title" y="-38" text-anchor="middle">ATLÁNTICO</text>
+                                    <path class="jmap-commute-base" d="M-22,-14 Q10,-12 20,16"/>
+                                    <path class="jmap-commute" d="M-22,-14 Q10,-12 20,16"/>
+                                    <circle class="jmap-city" data-stop="1" cx="-22" cy="-14" r="5.5"/>
+                                    <circle class="jmap-city" data-stop="0" cx="20" cy="16" r="5.5"/>
+                                    <text class="jmap-label sm" x="-22" y="-23" text-anchor="middle">Barranquilla</text>
+                                    <text class="jmap-label sm" x="20" y="33" text-anchor="middle">Malambo</text>
+                                    <text class="jmap-hours" x="9" y="0" text-anchor="middle">2 h</text>
+                                </g>
+                                <circle class="jmap-pulse" id="jmap-pulse" r="6"/>
+                                <circle class="jmap-city" data-stop="1" cx="83.1" cy="23.7" r="4.5"/>
+                                <circle class="jmap-city" data-stop="2" cx="113.6" cy="363.9" r="5.5"/>
+                                <circle class="jmap-city" data-stop="3" cx="88.4" cy="71.2" r="5.5"/>
+                                <circle class="jmap-traveler" id="jmap-traveler" r="4"/>
+                                <text class="jmap-label" x="124.6" y="367.9">Santiago</text>
+                                <text class="jmap-label" x="99.4" y="75.2">Bogotá</text>
+                            </svg>
                     </div>
                     <div class="jmap-side">
-                        <p class="jmap-total"><i class="fa-solid fa-route"></i> <span>Más de 9.200 km recorridos</span></p>
-                        <ol class="jmap-steps" id="jmap-steps">
-                            <li class="jmap-step" data-stop="0">
-                                <button type="button"><span class="jmap-when">2019 – 2023</span><strong>Malambo, Atlántico</strong>
-                                <span class="jmap-text">Mi punto de partida. Desde aquí salía cada día a la universidad: unas dos horas de camino solo para llegar a clase.</span></button>
-                            </li>
-                            <li class="jmap-step" data-stop="1">
-                                <button type="button"><span class="jmap-when">2019 – 2023</span><strong>Barranquilla</strong>
-                                <span class="jmap-text">Economía en la Universidad del Norte con beca, analista de datos e instructor de Python. Me gradué con honores.</span></button>
-                            </li>
-                            <li class="jmap-step" data-stop="2">
-                                <button type="button"><span class="jmap-when">2023 – 2025 · 4.958 km al sur</span><strong>Santiago de Chile</strong>
-                                <span class="jmap-text">Magíster en Economía en la Universidad Alberto Hurtado con beca ILADES. Tesis Magna Cum Laude y artículo Q1.</span></button>
-                            </li>
-                            <li class="jmap-step" data-stop="3">
-                                <button type="button"><span class="jmap-when">2025 – hoy · 4.258 km de regreso</span><strong>Bogotá</strong>
-                                <span class="jmap-text">World Bank Group y Centro Javeriano de Competitividad: datos y evidencia para las decisiones de política.</span></button>
-                            </li>
-                        </ol>
+                        <div class="jmap-places" role="tablist" aria-label="Ciudades">
+                            <button type="button" class="jplace" role="tab" data-stop="0" aria-selected="true"><span class="jplace-n">1</span><span class="jplace-txt"><strong>Malambo</strong><small>2001 – 2019</small></span></button>
+                            <button type="button" class="jplace" role="tab" data-stop="1" aria-selected="false"><span class="jplace-n">2</span><span class="jplace-txt"><strong>Barranquilla</strong><small>2019 – 2023</small></span></button>
+                            <button type="button" class="jplace" role="tab" data-stop="2" aria-selected="false"><span class="jplace-n">3</span><span class="jplace-txt"><strong>Santiago</strong><small>2023 – 2025</small></span></button>
+                            <button type="button" class="jplace" role="tab" data-stop="3" aria-selected="false"><span class="jplace-n">4</span><span class="jplace-txt"><strong>Bogotá</strong><small>2025 – hoy</small></span></button>
+                        </div>
+                        <div class="jmap-stops">
+                            <section class="jstop" data-stop="0">
+                                <header class="jstop-head">
+                                    <span class="jstop-when">2001 – 2019</span>
+                                    <h4>Malambo, Atlántico</h4>
+                                    <p>Infancia, colegio y el punto de partida</p>
+                                </header>
+                                <ol class="jm-list">
+                                    <li class="jm" data-i="0">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-baby"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2001</span><span class="jm-cat">Personal</span></span>
+                                                <strong>El comienzo</strong>
+                                                <span class="jm-text">Nací en 2001. Desde niño me caractericé por ser creativo y por vivir analizando el mundo que me rodea.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="1">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-shapes"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2004</span><span class="jm-cat">Formación</span></span>
+                                                <strong>Mis primeras letras</strong>
+                                                <span class="jm-text">A los 3 años empecé mi educación en una escuelita comunitaria.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="2">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-school"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2007 – 2012</span><span class="jm-cat">Formación</span></span>
+                                                <strong>Primaria: La Esperanza y Simón Bolívar</strong>
+                                                <span class="jm-text">Estudié hasta cuarto grado en la Escuela La Esperanza, un colegio informal, y cursé quinto en la Institución Educativa Simón Bolívar, de educación pública.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="3">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-book-open"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2013 – 2018</span><span class="jm-cat">Formación</span></span>
+                                                <strong>Secundaria: Unidad Pedagógica Bolivariana</strong>
+                                                <span class="jm-text">Hice el bachillerato en esta institución privada, donde me gradué con excelencia académica.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="4">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-award"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2018</span><span class="jm-cat">Logro</span></span>
+                                                <strong>377 en las Pruebas Saber 11</strong>
+                                                <span class="jm-text">Uno de los mejores puntajes del país, que me valió la Beca Excelencia del Gobierno Nacional para estudiar en la Universidad del Norte.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ol>
+                            </section>
+                            <section class="jstop" data-stop="1" hidden>
+                                <header class="jstop-head">
+                                    <span class="jstop-when">2019 – 2023</span>
+                                    <h4>Barranquilla</h4>
+                                    <p>Universidad del Norte, a dos horas de casa</p>
+                                </header>
+                                <ol class="jm-list">
+                                    <li class="jm" data-i="5">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-bus"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2019 – 2023</span><span class="jm-cat">Personal · Formación</span></span>
+                                                <strong>Economía en la Universidad del Norte</strong>
+                                                <span class="jm-text">Pregrado becado en Barranquilla. Viajaba a diario desde Malambo: unas dos horas solo para llegar a clase.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="6">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-laptop-code"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2021 – 2022</span><span class="jm-cat">Formación</span></span>
+                                                <strong>Diplomado Misión TIC</strong>
+                                                <span class="jm-text">Formación en programación con la Universidad Sergio Arboleda y el Ministerio TIC.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="7">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-chart-column"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Dic 2022 – Jul 2023</span><span class="jm-cat">Profesional</span></span>
+                                                <strong>Analista de Datos e Investigación</strong>
+                                                <span class="jm-text">Departamento de Economía, Universidad del Norte: informalidad y pobreza, análisis con NLP de datos de X/Twitter y dashboards para el Observatorio OCSA.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="8">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-chalkboard-user"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Feb – May 2023</span><span class="jm-cat">Docencia</span></span>
+                                                <strong>Instructor de Python y tutor de Econometría II</strong>
+                                                <span class="jm-text">Diseñé el currículo del curso de análisis de datos con Python de la Universidad del Norte, dicté las clases y gestioné su repositorio en GitHub.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="9">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-medal"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2023</span><span class="jm-cat">Logro</span></span>
+                                                <strong>Grado con honores</strong>
+                                                <span class="jm-text">Medalla de Plata por el mayor promedio académico, Premio al Mérito Científico y tesis Cum Laude sobre la pobreza en Barranquilla.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="10">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-pen-nib"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2023</span><span class="jm-cat">Investigación</span></span>
+                                                <strong>Primeras publicaciones</strong>
+                                                <span class="jm-text">Documento sobre informalidad y pobreza (Serie Documentos n.º 55, Uninorte), ponencia en AFADECO y columna en Contexto.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ol>
+                            </section>
+                            <section class="jstop" data-stop="2" hidden>
+                                <header class="jstop-head">
+                                    <span class="jstop-when">2023 – 2025</span>
+                                    <h4>Santiago de Chile</h4>
+                                    <p>4.958 km al sur</p>
+                                </header>
+                                <ol class="jm-list">
+                                    <li class="jm" data-i="11">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-plane-departure"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Jul 2023 – Abr 2025</span><span class="jm-cat">Personal · Formación</span></span>
+                                                <strong>Rumbo a Santiago de Chile</strong>
+                                                <span class="jm-text">Me mudé a Chile para cursar el Magíster en Economía en la Universidad Alberto Hurtado con la beca ILADES.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="12">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-person-chalkboard"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Ago – Dic 2024</span><span class="jm-cat">Docencia</span></span>
+                                                <strong>Tutor académico en la FEN-UAH</strong>
+                                                <span class="jm-text">Microeconomía I (maestría), Estadística y Probabilidad en R, Estadística Inferencial en R y Series de tiempo en R.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="13">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-graduation-cap"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">2025</span><span class="jm-cat">Logro · Investigación</span></span>
+                                                <strong>Magna Cum Laude y artículo Q1</strong>
+                                                <span class="jm-text">Mi tesis sobre el costo económico del conflicto armado obtuvo Magna Cum Laude, y con Carlos Díaz publiqué en Defence and Peace Economics (Q1).</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ol>
+                            </section>
+                            <section class="jstop" data-stop="3" hidden>
+                                <header class="jstop-head">
+                                    <span class="jstop-when">2025 – hoy</span>
+                                    <h4>Bogotá</h4>
+                                    <p>4.258 km de regreso al norte</p>
+                                </header>
+                                <ol class="jm-list">
+                                    <li class="jm" data-i="14">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-earth-americas"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Feb 2025 – Hoy</span><span class="jm-cat">Profesional</span></span>
+                                                <strong>World Bank Group</strong>
+                                                <span class="jm-text">Country Program and Portfolio Analyst en Bogotá: automatizo flujos de datos (de 12 horas a 10 minutos), creo dashboards del portafolio y aporto a productos como el Diagnóstico de País.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="15">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Abr 2026 – Hoy</span><span class="jm-cat">Profesional · Investigación</span></span>
+                                                <strong>Centro Javeriano de Competitividad</strong>
+                                                <span class="jm-text">Consultor de investigación en productividad, empleo e inteligencia artificial. Desarrollé cinco herramientas web interactivas para públicos no técnicos.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="jm" data-i="16">
+                                        <button type="button" aria-expanded="false">
+                                            <span class="jm-dot"><i class="fa-solid fa-rocket"></i></span>
+                                            <span class="jm-body">
+                                                <span class="jm-meta"><span class="jm-year">Hoy</span><span class="jm-cat">Personal</span></span>
+                                                <strong>Lo que viene</strong>
+                                                <span class="jm-text">ChicoPython, mi proyecto de contenido educativo de análisis de datos, y las ganas de seguir investigando y aprendiendo.</span>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ol>
+                            </section>
+                        </div>
                         <div class="jmap-controls">
                             <button type="button" class="htl-btn" id="jmap-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button type="button" class="htl-btn htl-play" id="jmap-play" aria-label="Pausar avance automático"><span class="htl-play-inner"><i class="fa-solid fa-pause"></i></span></button>
                             <button type="button" class="htl-btn" id="jmap-next" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                            <div class="jmap-progress" aria-hidden="true"><span id="jmap-bar"></span></div>
+                            <span class="htl-counter" id="jmap-counter" aria-live="polite">1 / 17</span>
                         </div>
                     </div>
                 </div>
@@ -901,24 +907,27 @@
     <dialog class="modal" id="dlg-automation" aria-labelledby="auto-title">
         <div class="modal-card automation">
             <button class="modal-close" type="button" data-close aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
-            <p class="eyebrow"><i class="fa-solid fa-gears"></i> World Bank Group</p>
+            <p class="eyebrow"><i class="fa-solid fa-gears"></i> World Bank Group · Python</p>
             <h2 id="auto-title">De 12 horas a 10 minutos</h2>
             <p class="auto-intro">Así cambió la actualización de los datos del portafolio cuando la convertí en un flujo automatizado con Python.</p>
-            <div class="auto-lanes">
-                <div class="auto-lane" id="lane-manual">
-                    <div class="auto-lane-head"><span><i class="fa-solid fa-hand"></i> Antes: manual</span><strong class="auto-clock">0 h 00 min</strong></div>
-                    <div class="auto-bar"><span></span></div>
-                    <ol class="auto-steps"></ol>
+
+            <div class="race">
+                <div class="race-row" id="race-manual">
+                    <div class="race-label"><span class="race-tag"><i class="fa-solid fa-hand"></i> <span>Antes · manual</span></span><strong class="race-clock">0 h 00 min</strong></div>
+                    <div class="race-track"><div class="race-segs"></div></div>
                 </div>
-                <div class="auto-lane auto" id="lane-auto">
-                    <div class="auto-lane-head"><span><i class="fa-solid fa-bolt"></i> Ahora: automatizado</span><strong class="auto-clock">0 min</strong></div>
-                    <div class="auto-bar"><span></span></div>
-                    <ol class="auto-steps"></ol>
+                <div class="race-row auto" id="race-auto">
+                    <div class="race-label"><span class="race-tag"><i class="fa-solid fa-bolt"></i> <span>Ahora · automatizado</span></span><strong class="race-clock">0 min</strong></div>
+                    <div class="race-track"><div class="race-segs"></div><span class="race-done"><i class="fa-solid fa-circle-check"></i> <span>Listo</span></span></div>
                 </div>
+                <div class="race-axis" aria-hidden="true"><span>0 h</span><span>3 h</span><span>6 h</span><span>9 h</span><span>12 h</span></div>
+                <ol class="race-steps"></ol>
             </div>
-            <div class="auto-foot">
-                <button type="button" class="btn btn-primary" id="auto-play"><i class="fa-solid fa-play"></i> <span>Reproducir</span></button>
-                <p class="auto-result" id="auto-result" aria-live="polite"></p>
+
+            <div class="auto-summary" id="auto-summary">
+                <div class="auto-kpi"><strong>−98,6 %</strong><span>de tiempo en cada actualización</span></div>
+                <div class="auto-kpi"><strong>11 h 50 min</strong><span>liberadas para el análisis</span></div>
+                <button type="button" class="btn btn-outline" id="auto-play"><i class="fa-solid fa-rotate-right"></i> <span>Repetir</span></button>
             </div>
             <p class="auto-note">El total (12 h → 10 min) es real; el reparto entre pasos es ilustrativo.</p>
         </div>
@@ -1100,143 +1109,6 @@
             });
         }, { threshold: 0.6 });
         els.forEach(el => { if (!reduceMotion) el.textContent = '0'; io.observe(el); });
-    })();
-
-    // Timeline horizontal: clic, flechas, deslizar y avance automático
-    (function horizontalTimeline() {
-        const root = document.getElementById('htl');
-        const viewport = document.getElementById('htl-viewport');
-        const track = document.getElementById('htl-track');
-        const fill = document.getElementById('htl-line-fill');
-        const scrub = document.getElementById('htl-scrub');
-        const counter = document.getElementById('htl-counter');
-        const playBtn = document.getElementById('htl-play');
-        const allItems = [...track.querySelectorAll('.htl-item')];
-        const DURATION = 7000;           // ms por hito
-        let items = allItems.slice();
-        let index = 0;
-        let elapsed = 0, last = null;
-        let userPaused = reduceMotion;   // con movimiento reducido no avanza solo
-        let hovering = false, focused = false, inView = false;
-
-        function itemWidth() { return items[0] ? items[0].offsetWidth : 0; }
-
-        function layout() {
-            const w = itemWidth();
-            const offset = viewport.clientWidth / 2 - (index + 0.5) * w;
-            track.style.transform = `translateX(${offset}px)`;
-            track.style.width = (items.length * w) + 'px';
-            fill.style.width = ((index + 0.5) * w) + 'px';
-            items.forEach((it, i) => {
-                it.classList.toggle('active', i === index);
-                it.classList.toggle('reached', i <= index);
-                it.setAttribute('aria-hidden', i === index ? 'false' : 'true');
-            });
-            counter.textContent = `${index + 1} / ${items.length}`;
-            scrub.max = Math.max(0, items.length - 1);
-            scrub.value = index;
-            scrub.style.setProperty('--fill', items.length > 1 ? (index / (items.length - 1) * 100) + '%' : '100%');
-        }
-
-        function go(i, fromUser) {
-            index = (i + items.length) % items.length;
-            elapsed = 0;
-            layout();
-            if (fromUser) playBtn.style.setProperty('--p', 0);
-        }
-
-        function isRunning() { return !userPaused && !hovering && !focused && inView && !document.hidden; }
-
-        function loop(now) {
-            if (last !== null && isRunning()) {
-                elapsed += now - last;
-                if (elapsed >= DURATION) go(index + 1);
-            }
-            last = now;
-            playBtn.style.setProperty('--p', Math.min(1, elapsed / DURATION).toFixed(4));
-            root.classList.toggle('is-paused', !isRunning());
-            requestAnimationFrame(loop);
-        }
-
-        function setUserPaused(p) {
-            userPaused = p;
-            playBtn.querySelector('i').className = p ? 'fa-solid fa-play' : 'fa-solid fa-pause';
-            playBtn.setAttribute('aria-label', T(p ? 'Reanudar avance automático' : 'Pausar avance automático'));
-        }
-
-        // Clic en un hito
-        allItems.forEach(it => {
-            it.addEventListener('click', () => {
-                if (swiped) { swiped = false; return; }
-                const i = items.indexOf(it); if (i >= 0) go(i, true);
-            });
-        });
-        document.getElementById('htl-prev').addEventListener('click', () => go(index - 1, true));
-        document.getElementById('htl-next').addEventListener('click', () => go(index + 1, true));
-        playBtn.addEventListener('click', () => setUserPaused(!userPaused));
-
-        // Teclado
-        root.addEventListener('keydown', e => {
-            if (e.key === 'ArrowRight') { go(index + 1, true); e.preventDefault(); }
-            if (e.key === 'ArrowLeft') { go(index - 1, true); e.preventDefault(); }
-        });
-
-        // Barra de recorrido arrastrable
-        scrub.addEventListener('input', () => go(+scrub.value, true));
-
-        // Scroll horizontal: trackpad hacia los lados o Shift + rueda
-        let wheelAcc = 0, wheelLock = 0;
-        root.addEventListener('wheel', e => {
-            const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
-            if (!dx) return;                 // el scroll vertical sigue moviendo la página
-            e.preventDefault();
-            const now = performance.now();
-            if (now < wheelLock) return;
-            wheelAcc += dx;
-            if (Math.abs(wheelAcc) > 50) {
-                go(index + (wheelAcc > 0 ? 1 : -1), true);
-                wheelAcc = 0;
-                wheelLock = now + 450;
-            }
-        }, { passive: false });
-
-        // Deslizar en pantallas táctiles
-        let startX = null, swiped = false;
-        viewport.addEventListener('pointerdown', e => { startX = e.clientX; swiped = false; });
-        viewport.addEventListener('pointerup', e => {
-            if (startX === null) return;
-            const dx = e.clientX - startX; startX = null;
-            if (Math.abs(dx) > 40) { swiped = true; go(index + (dx < 0 ? 1 : -1), true); }
-        });
-
-        // Pausas automáticas: cursor encima, foco, fuera de pantalla
-        if (finePointer) {
-            root.addEventListener('mouseenter', () => { hovering = true; });
-            root.addEventListener('mouseleave', () => { hovering = false; });
-        }
-        root.addEventListener('focusin', () => { focused = true; });
-        root.addEventListener('focusout', e => { if (!root.contains(e.relatedTarget)) focused = false; });
-        new IntersectionObserver(([e]) => { inView = e.isIntersecting; }, { threshold: 0.35 }).observe(root);
-
-        // Filtros
-        document.querySelectorAll('.tl-filter').forEach(btn => btn.addEventListener('click', () => {
-            const f = btn.dataset.filter;
-            document.querySelectorAll('.tl-filter').forEach(b => {
-                b.classList.toggle('active', b === btn);
-                b.setAttribute('aria-pressed', b === btn);
-            });
-            allItems.forEach(it => {
-                const show = f === 'all' || it.dataset.cat.split(' ').includes(f);
-                it.classList.toggle('hidden', !show);
-            });
-            items = allItems.filter(it => !it.classList.contains('hidden'));
-            go(0, true);
-        }));
-
-        let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 120); });
-        setUserPaused(userPaused);
-        layout();
-        requestAnimationFrame(loop);
     })();
 
     // Habilidades: al pasar el cursor o tocar una herramienta se muestra su descripción
@@ -1437,49 +1309,44 @@
             ['Actualizar indicadores y tablas', 120, 2],
             ['Generar gráficos e informe', 120, 2],
         ];
-        const lanes = { manual: document.getElementById('lane-manual'), auto: document.getElementById('lane-auto') };
-        const playBtn = document.getElementById('auto-play');
-        const result = document.getElementById('auto-result');
+        const TOTAL = 720;   // minutos en la escala común
+        const rows = { manual: document.getElementById('race-manual'), auto: document.getElementById('race-auto') };
+        const list = document.querySelector('.race-steps');
+        const summary = document.getElementById('auto-summary');
         const fmtH = m => `${Math.floor(m / 60)} h ${String(Math.round(m % 60)).padStart(2, '0')} min`;
-        const draw = () => {
+        function draw() {
             ['manual', 'auto'].forEach((k, li) => {
-                lanes[k].querySelector('.auto-steps').innerHTML = steps.map(s =>
-                    `<li><i class="fa-regular fa-circle"></i><span>${T(s[0])}</span><em>${li ? s[2] + ' min' : (s[1] / 60) + ' h'}</em></li>`).join('');
+                rows[k].querySelector('.race-segs').innerHTML = steps.map((s, i) =>
+                    `<span class="seg s${i + 1}" style="flex-basis:${(li ? s[2] : s[1]) / TOTAL * 100}%"></span>`).join('');
             });
-        };
-        const set = (k, frac) => {
-            const lane = lanes[k];
-            const total = k === 'manual' ? 720 : 10;
-            lane.querySelector('.auto-bar span').style.width = (frac * 100) + '%';
-            lane.querySelector('.auto-clock').textContent = k === 'manual' ? fmtH(frac * total) : `${Math.round(frac * total)} min`;
-            let acc = 0;
-            lane.querySelectorAll('.auto-steps li').forEach((li, i) => {
-                acc += k === 'manual' ? steps[i][1] : steps[i][2];
-                const done = frac * total >= acc - 0.001;
-                li.classList.toggle('done', done);
-                li.querySelector('i').className = done ? 'fa-solid fa-circle-check' : 'fa-regular fa-circle';
-            });
+            list.innerHTML = steps.map((s, i) =>
+                `<li><span class="sw s${i + 1}"></span><span class="race-step-name">${T(s[0])}</span><span class="race-step-time">${s[1] / 60} h <i class="fa-solid fa-arrow-right"></i> ${s[2]} min</span></li>`).join('');
+        }
+        const set = (k, minutes) => {
+            const row = rows[k], cap = k === 'manual' ? 720 : 10;
+            const m = Math.min(cap, minutes);
+            row.querySelector('.race-segs').style.clipPath = `inset(0 ${(100 - m / TOTAL * 100).toFixed(3)}% 0 0)`;
+            row.querySelector('.race-clock').textContent = k === 'manual' ? fmtH(m) : `${Math.round(m)} min`;
+            row.classList.toggle('finished', m >= cap);
         };
         let raf = null;
-        const reset = () => { cancelAnimationFrame(raf); set('manual', 0); set('auto', 0); result.textContent = ''; };
+        const reset = () => { cancelAnimationFrame(raf); set('manual', 0); set('auto', 0); summary.classList.remove('show'); };
         const play = () => {
             reset();
-            const DUR = reduceMotion ? 1 : 6000;   // 12 horas en 6 segundos
-            const t0 = performance.now();
+            const DUR = reduceMotion ? 1 : 5200, t0 = performance.now();
             const tick = now => {
                 const p = Math.min(1, (now - t0) / DUR);
-                set('manual', p);
-                set('auto', Math.min(1, p * 72 * (reduceMotion ? 1 : 1)));   // 10 min de 720
-                if (p < 1) raf = requestAnimationFrame(tick);
-                else result.textContent = T('Ahorro: 11 h 50 min en cada actualización (−98,6 %).');
+                set('manual', p * 720);
+                set('auto', p * 720);
+                if (p < 1) raf = requestAnimationFrame(tick); else summary.classList.add('show');
             };
             raf = requestAnimationFrame(tick);
         };
         draw(); reset();
-        playBtn.addEventListener('click', play);
-        dialogs.automation.addEventListener('opened', () => setTimeout(play, 350));
+        document.getElementById('auto-play').addEventListener('click', play);
+        dialogs.automation.addEventListener('opened', () => setTimeout(play, 300));
         dialogs.automation.addEventListener('close', reset);
-        document.addEventListener('langchange', () => { draw(); reset(); });
+        document.addEventListener('langchange', () => { draw(); });
     })();
 
     // ---------- Vista previa de herramientas ----------
@@ -1505,7 +1372,7 @@
         const commands = [
             { label: 'Inicio', icon: 'fa-house', run: go('home') },
             { label: 'Sobre mí', icon: 'fa-user', run: go('about') },
-            { label: 'Mi trayectoria en el mapa', icon: 'fa-map-location-dot', run: () => { go('about')(); document.getElementById('view-map').click(); setTimeout(() => document.getElementById('jmap').scrollIntoView({ block: 'center' }), 50); } },
+            { label: 'Mi trayectoria en el mapa', icon: 'fa-map-location-dot', run: go('journey') },
             { label: 'Experiencia', icon: 'fa-briefcase', run: go('experience') },
             { label: 'Habilidades', icon: 'fa-screwdriver-wrench', run: go('skills') },
             { label: 'Investigación', icon: 'fa-flask', run: go('research') },
@@ -1552,45 +1419,120 @@
         document.addEventListener('langchange', render);
     })();
 
-    // ---------- Mapa de la trayectoria ----------
+    // ---------- Trayectoria en el mapa ----------
     (() => {
-        const tlBtn = document.getElementById('view-tl'), mapBtn = document.getElementById('view-map');
-        const htl = document.getElementById('htl'), jmap = document.getElementById('jmap');
-        const filters = document.querySelector('.tl-filters');
-        const steps = [...document.querySelectorAll('.jmap-step')];
-        const r1 = document.getElementById('jmap-r1'), r2 = document.getElementById('jmap-r2');
-        let stop = 0, timer = null, userPaused = reduceMotion, hover = false, visible = false;
+        const root = document.getElementById('jmap');
+        if (!root) return;
+        const svg = document.getElementById('jmap-svg');
+        const items = [...root.querySelectorAll('.jm')];
+        const stops = [...root.querySelectorAll('.jstop')];
+        const places = [...root.querySelectorAll('.jplace')];
+        const playBtn = document.getElementById('jmap-play');
+        const counter = document.getElementById('jmap-counter');
+        const bar = document.getElementById('jmap-bar');
+        const pulse = document.getElementById('jmap-pulse');
+        const traveler = document.getElementById('jmap-traveler');
+        const routes = [document.getElementById('jmap-r1'), document.getElementById('jmap-r2')];
+        const glows = [document.getElementById('jmap-g1'), document.getElementById('jmap-g2')];
+        const DURATION = 6500;
+        const stopOf = i => +items[i].closest('.jstop').dataset.stop;
+        const firstOf = s => items.findIndex(it => stopOf(items.indexOf(it)) === s);
+        const CITY = { 0: [282, 78], 1: [240, 48], 2: null, 3: null };   // Malambo y Barranquilla se ven en el recuadro
+        const VIEW = { north: [6, -6, 330, 300], full: [0, 0, 400, 470] };
+        let index = 0, stopNow = -1, elapsed = 0, last = performance.now();
+        let userPaused = reduceMotion, hover = false, focusIn = false, visible = false;
+        let view = VIEW.north.slice();
 
-        const setView = map => {
-            tlBtn.classList.toggle('active', !map); mapBtn.classList.toggle('active', map);
-            tlBtn.setAttribute('aria-selected', !map); mapBtn.setAttribute('aria-selected', map);
-            htl.hidden = map; jmap.hidden = !map; filters.hidden = map;
-            if (map) { show(0); schedule(); } else clearTimeout(timer);
-        };
-        function show(i) {
-            stop = (i + steps.length) % steps.length;
-            steps.forEach((s, j) => { s.classList.toggle('active', j === stop); s.classList.toggle('past', j < stop); s.querySelector('button').setAttribute('aria-current', j === stop ? 'step' : 'false'); });
-            jmap.querySelectorAll('.jmap-city').forEach(c => { const n = +c.dataset.stop; c.classList.toggle('active', n === stop); c.classList.toggle('past', n < stop); });
-            jmap.querySelector('.jmap-inset').classList.toggle('active', stop <= 1);
-            r1.classList.toggle('drawn', stop >= 2);
-            r2.classList.toggle('drawn', stop >= 3);
+        function animateView(target) {
+            const from = view.slice();
+            if (reduceMotion) { view = target.slice(); svg.setAttribute('viewBox', view.join(' ')); return; }
+            const t0 = performance.now(), D = 1100;
+            const step = now => {
+                const p = Math.min(1, (now - t0) / D), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+                view = from.map((v, i) => v + (target[i] - v) * e);
+                svg.setAttribute('viewBox', view.map(v => v.toFixed(1)).join(' '));
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
         }
-        function schedule() {
-            clearTimeout(timer);
-            if (userPaused || jmap.hidden) return;
-            timer = setTimeout(() => { if (!hover && visible) show(stop + 1); schedule(); }, 5000);
+        function travel(path) {
+            if (reduceMotion) return;
+            const len = path.getTotalLength(), t0 = performance.now(), D = 1600;
+            traveler.classList.add('on');
+            const step = now => {
+                const p = Math.min(1, (now - t0) / D), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+                const pt = path.getPointAtLength(len * e);
+                traveler.setAttribute('cx', pt.x); traveler.setAttribute('cy', pt.y);
+                if (p < 1) requestAnimationFrame(step); else traveler.classList.remove('on');
+            };
+            requestAnimationFrame(step);
         }
-        const user = i => { userPaused = true; clearTimeout(timer); show(i); };
-        tlBtn.addEventListener('click', () => setView(false));
-        mapBtn.addEventListener('click', () => setView(true));
-        steps.forEach((s, i) => s.querySelector('button').addEventListener('click', () => user(i)));
-        jmap.querySelectorAll('.jmap-city').forEach(c => c.addEventListener('click', () => user(+c.dataset.stop)));
-        document.getElementById('jmap-prev').addEventListener('click', () => user(stop - 1));
-        document.getElementById('jmap-next').addEventListener('click', () => user(stop + 1));
-        jmap.addEventListener('mouseenter', () => hover = true);
-        jmap.addEventListener('mouseleave', () => hover = false);
-        new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.3 }).observe(jmap);
-        show(0);
+        function setStop(s) {
+            if (s === stopNow) return;
+            const prev = stopNow; stopNow = s;
+            stops.forEach(st => { st.hidden = +st.dataset.stop !== s; });
+            places.forEach(p => { const on = +p.dataset.stop === s; p.classList.toggle('active', on); p.classList.toggle('past', +p.dataset.stop < s); p.setAttribute('aria-selected', on); });
+            routes.forEach((r, i) => { const on = s >= i + 2; r.classList.toggle('drawn', on); glows[i].classList.toggle('drawn', on); });
+            if (s >= 2 && prev === s - 1) travel(routes[s - 2]);
+            svg.querySelectorAll('.jmap-city').forEach(c => { const n = +c.dataset.stop; c.classList.toggle('active', n === s); c.classList.toggle('past', n < s); });
+            svg.querySelector('.jmap-inset').classList.toggle('active', s <= 1);
+            svg.querySelectorAll('.jmap-land path').forEach(p => p.classList.toggle('hl', p.dataset.country === (s === 2 ? 'Chile' : 'Colombia')));
+            const target = svg.querySelector(`.jmap-city[data-stop="${s}"]:not(.jmap-inset .jmap-city)`) ;
+            const inInset = s <= 1;
+            const ref = inInset ? svg.querySelector(`.jmap-inset .jmap-city[data-stop="${s}"]`) : target;
+            const off = inInset ? [262, 62] : [0, 0];
+            pulse.setAttribute('cx', +ref.getAttribute('cx') + off[0]);
+            pulse.setAttribute('cy', +ref.getAttribute('cy') + off[1]);
+            animateView(s <= 1 ? VIEW.north : VIEW.full);
+        }
+        function render(fromUser) {
+            const s = stopOf(index);
+            setStop(s);
+            items.forEach((it, k) => {
+                const on = k === index;
+                it.classList.toggle('active', on);
+                it.classList.toggle('past', k < index);
+                it.querySelector('button').setAttribute('aria-expanded', on);
+            });
+            counter.textContent = `${index + 1} / ${items.length}`;
+            bar.style.width = ((index + 1) / items.length * 100) + '%';
+            if (fromUser) { elapsed = 0; playBtn.style.setProperty('--p', 0); }
+        }
+        const go = (i, fromUser) => { index = (i + items.length) % items.length; render(fromUser); };
+        const isRunning = () => !userPaused && !hover && !focusIn && visible && !document.hidden;
+        function setPaused(p) {
+            userPaused = p;
+            root.classList.toggle('is-paused', p);
+            playBtn.querySelector('i').className = p ? 'fa-solid fa-play' : 'fa-solid fa-pause';
+            playBtn.setAttribute('aria-label', T(p ? 'Reanudar avance automático' : 'Pausar avance automático'));
+        }
+        function loop(now) {
+            const dt = now - last; last = now;
+            if (isRunning()) {
+                elapsed += dt;
+                if (elapsed >= DURATION) { elapsed = 0; go(index + 1); }
+                playBtn.style.setProperty('--p', Math.min(1, elapsed / DURATION).toFixed(4));
+            }
+            requestAnimationFrame(loop);
+        }
+        items.forEach((it, k) => it.querySelector('button').addEventListener('click', () => go(k, true)));
+        places.forEach(p => p.addEventListener('click', () => go(firstOf(+p.dataset.stop), true)));
+        svg.querySelectorAll('.jmap-city').forEach(c => c.addEventListener('click', () => go(firstOf(+c.dataset.stop), true)));
+        document.getElementById('jmap-prev').addEventListener('click', () => go(index - 1, true));
+        document.getElementById('jmap-next').addEventListener('click', () => go(index + 1, true));
+        playBtn.addEventListener('click', () => setPaused(!userPaused));
+        root.addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1, true); }
+            if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1, true); }
+        });
+        root.addEventListener('mouseenter', () => hover = true);
+        root.addEventListener('mouseleave', () => hover = false);
+        root.addEventListener('focusin', () => focusIn = true);
+        root.addEventListener('focusout', () => focusIn = false);
+        new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.35 }).observe(root);
+        setPaused(userPaused);
+        render(true);
+        requestAnimationFrame(loop);
     })();
 
     // ---------- Control sintético ----------

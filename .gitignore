@@ -1,0 +1,14 @@
+.claude/
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Copias de trabajo en la raíz: lo publicado (GitHub Pages) vive en docs/
+/index.html
+/style.css
+/i18n.js
+/sound.mp3
+/robots.txt
+/sitemap.xml
+/img/
+/documents/

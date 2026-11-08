@@ -371,6 +371,10 @@ window.I18N = (() => {
         "liberadas para el análisis": "freed up for analysis",
         "Repetir": "Replay",
 
+        "Magíster en Economía": "Master’s in Economics",
+        "Hora de Colombia (GMT−5)": "Colombia time (GMT−5)",
+        "Español e inglés": "Spanish and English",
+        "Nativo · fluido": "Native · fluent",
         // Documento
         'Jorge M. Orozco | Economista': 'Jorge M. Orozco | Economist',
     };

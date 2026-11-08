@@ -181,17 +181,24 @@
             </div>
 
             <div class="about-v2">
-                <div class="about-lead reveal">
-                    <p class="about-big">Soy economista del Caribe colombiano. Trabajo donde se cruzan la investigación económica, los datos y la política pública: hoy en el <strong>World Bank Group</strong> y en el <strong>Centro Javeriano de Competitividad</strong>.</p>
-                    <p class="about-note"><i class="fa-solid fa-quote-left"></i> <span>Desde niño analizo todo lo que me rodea. La economía me dio las herramientas para proponer soluciones fuera de lo común.</span></p>
-                    <div class="interests">
+                <div class="about-top">
+                    <div class="about-lead reveal">
+                        <p class="about-big">Soy economista del Caribe colombiano. Trabajo donde se cruzan la investigación económica, los datos y la política pública: hoy en el <strong>World Bank Group</strong> y en el <strong>Centro Javeriano de Competitividad</strong>.</p>
+                        <p class="about-note"><i class="fa-solid fa-quote-left"></i> <span>Desde niño analizo todo lo que me rodea. La economía me dio las herramientas para proponer soluciones fuera de lo común.</span></p>
+                        <ul class="about-facts">
+                            <li><i class="fa-solid fa-graduation-cap"></i><span><strong>Magíster en Economía</strong><small>Universidad Alberto Hurtado</small></span></li>
+                            <li><i class="fa-solid fa-location-dot"></i><span><strong>Bogotá, Colombia</strong><small>Hora de Colombia (GMT−5)</small></span></li>
+                            <li><i class="fa-solid fa-language"></i><span><strong>Español e inglés</strong><small>Nativo · fluido</small></span></li>
+                        </ul>
+                    </div>
+                    <div class="about-topics reveal">
                         <h3 class="mini-title">Temas que investigo</h3>
-                        <ul class="chips">
-                            <li><i class="fa-solid fa-seedling"></i> Economía del desarrollo</li>
-                            <li><i class="fa-solid fa-hand-holding-heart"></i> Mercado laboral y pobreza</li>
-                            <li><i class="fa-solid fa-gauge-high"></i> Productividad y competitividad</li>
-                            <li><i class="fa-solid fa-map-location-dot"></i> Convergencia territorial y poblacional</li>
-                            <li><i class="fa-solid fa-scale-balanced"></i> Evaluación de impacto</li>
+                        <ul class="topics">
+                            <li><span class="topic-icon"><i class="fa-solid fa-seedling"></i></span><span>Economía del desarrollo</span></li>
+                            <li><span class="topic-icon"><i class="fa-solid fa-hand-holding-heart"></i></span><span>Mercado laboral y pobreza</span></li>
+                            <li><span class="topic-icon"><i class="fa-solid fa-gauge-high"></i></span><span>Productividad y competitividad</span></li>
+                            <li><span class="topic-icon"><i class="fa-solid fa-map-location-dot"></i></span><span>Convergencia territorial y poblacional</span></li>
+                            <li><span class="topic-icon"><i class="fa-solid fa-scale-balanced"></i></span><span>Evaluación de impacto</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1490,6 +1497,14 @@
             setStop(s);
             items.forEach((it, k) => {
                 const on = k === index;
+                if (on) {   // la flecha de la tarjeta apunta al ícono activo
+                    const list = it.parentElement, dot = it.querySelector('.jm-dot');
+                    it.style.setProperty('--tip', '0px');
+                    requestAnimationFrame(() => {
+                        const lr = list.getBoundingClientRect(), dr = dot.getBoundingClientRect();
+                        it.querySelector('.jm-body').style.setProperty('--tip', Math.max(12, dr.left - lr.left + dr.width / 2 - 6) + 'px');
+                    });
+                }
                 it.classList.toggle('active', on);
                 it.classList.toggle('past', k < index);
                 it.querySelector('button').setAttribute('aria-expanded', on);
